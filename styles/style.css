@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+:root{
+
+    /* Fonts */
+    --pop: 'Poppins';
+    --ub: 'Ubuntu';
+    --av: 'Avenir';
+
+    /* Colors */
+    --ash1: #888787;
+    --ash2: #f1f1f1e5;
+    --pk: #FF75A0;
+    --w: #ffffff;
+    --blk: #000000;
+    --m: #9F9F9F;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1330px;
+    padding: 0 50px;
+    margin: auto;
+}
+/********************************************* 
+# Navigation 
+**********************************************/
+nav{
+    position: sticky;
+    height: 70px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--w);
+    border: 1px solid var(--blk);
+}
+nav .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .max-width .logo{
+    display: flex;
+    align-items: center;
+}
+nav .max-width ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .max-width ul li{
+    list-style: none;
+}
+nav .max-width ul li a{
+    margin-left: 60px;
+    color: var(--blk);
+    font-family: var(--pop),sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+nav .max-width .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .max-width .icons svg{
+    margin-left: 30px;
+}
+
+/**************************************************** 
+# Header section 
+******************************************************/
+
+.reg{
+    height: 20vh;
+    background: url('assets/regImg.jpg');
+}
+.reg .max-width{
+    display: flex;
+}
+.reg .max-width .content{
+    position: absolute;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    top: 15%;
+    left: 45%;
+}
+.reg .max-width .content .img{
+    align-items: center;
+    margin-left: 30%;
+    margin-bottom: 3%;
+}
+.reg .max-width .content .txt{
+    text-align: center;
+}
+.reg .max-width .content .txt h2{
+    margin-bottom: 5%;
+    /* text-align: center; */
+    font-family: var(--ub), sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--blk);
+}
+.reg .max-width .content .txt p{
+    /* text-align: center; */
+    font-family: var(--pop), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--ash1);
+}
