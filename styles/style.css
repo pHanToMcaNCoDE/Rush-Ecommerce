@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 
@@ -16,6 +17,7 @@
     --w: #ffffff;
     --blk: #000000;
     --m: #9F9F9F;
+    --ash3: #f9fafc;
 }
 
 *{
@@ -78,8 +80,9 @@ nav .max-width .icons svg{
 ******************************************************/
 
 .reg{
-    height: 20vh;
+    height: 22vh;
     background-image: url('assets/regImg.jpg');
+    border: 1px solid var(--blk);
 }
 .reg .max-width{
     display: flex;
@@ -89,7 +92,7 @@ nav .max-width .icons svg{
     display: block;
     justify-content: space-between;
     align-items: center;
-    top: 15%;
+    top: 12%;
     left: 45%;
 }
 .reg .max-width .content .img{
@@ -120,26 +123,33 @@ nav .max-width .icons svg{
 # Form Styling 
 ******************************************/
 .form{
-    padding: 100px 0;
+    padding: 70px 0;
+    background-color: var(--w);
 }
 .form .max-width{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .form .max-width .login {
-    /* width: 100%; */
+    /* background-color: var(--w); */
+    width: 50%;
     height: 50vh;
     display: block;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
 }
 
-.form .max-width .login h2 {
+.form .max-width .login h2{
     font-size: 25px;
     font-family: var(--ub), sans-serif;
-    font-weight: 400;
-    color: var(--ash1);
+    font-weight: 600;
+    color: var(--blk);
     padding-bottom: 5%;
-    text-align: center;
+    margin-left: 9%;
+    margin-top: 4%;
+    /* text-align: center; */
 }
 
 .form .max-width .login .row {
@@ -149,18 +159,50 @@ nav .max-width .icons svg{
 .form .max-width .login .row .content {
     display: block;
 }
-
+.form .max-width .login .row .content label{
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 3%;
+}
 .form .max-width .login .row .content input {
-    padding: 6px 20px;
+    padding: 15px 20px;
     border-radius: 8px;
     outline: none;
     border: 1px solid var(--ash1);
     width: 100%;
+    margin-bottom: 5%;
+    font-size: 18px;
+}
+.form .max-width .login .remind{
+    display: flex;
+    align-items: center;
+}
+.form .max-width .login .remind input{
+    margin-top: 3%;
+    margin-left: 8%;
+}
+.form .max-width .login .remind input p{
+    font-family: var(--pop), sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--ash1);
+}
+.form .max-width .login .btn input{
+    padding: 15px 8%;
+    background-color: var(--pk);
+    color: var(--w);
+    border: 1px solid var(--pk);
+    margin-top: 3%;
+    margin-left: 8%;
+    font-size: 17px;
+    border-radius: 8px;
 }
 
 
 .form .max-width .register {
-    /* width: 100%; */
+    /* background-color: var(--w); */
+    width: 50%;
     height: 50vh;
     display: block;
     justify-content: space-between;
@@ -169,21 +211,44 @@ nav .max-width .icons svg{
 .form .max-width .register h2{
     font-size: 25px;
     font-family: var(--ub), sans-serif;
-    font-weight: 400;
-    color: var(--ash1);
+    font-weight: 600;
+    color: var(--blk);
     padding-bottom: 5%;
-    text-align: center;
+    margin-left: 13%;
+    /* text-align: center; */
 }
-.form .max-width .register .row{
+.form .max-width .register .max-width{
     display: block;
 }
-.form .max-width .register .row .content{
-    display: block;
+.form .max-width .register .max-width .row{
+    display: flex;
 }
-.form .max-width .register .row .content input{
-    padding: 6px 20px;
+.form .max-width .register .max-width .row .content{
+    display: block;
+    margin-left: 5%;
+}
+.form .max-width .register .max-width .row .content label {
+    font-family: var(--av), sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 3%;
+}
+.form .max-width .register .max-width .row .content input{
+    padding: 15px 20px;
     border-radius: 8px;
     outline: none;
     border: 1px solid var(--ash1);
     width: 100%;
+    margin-bottom: 5%;
+    font-size: 18px;
+}
+.form .max-width .register .btn input {
+    padding: 15px 8%;
+    background-color: var(--pk);
+    color: var(--w);
+    border: 1px solid var(--pk);
+    margin-top: 3%;
+    margin-left: 12%;
+    font-size: 17px;
+    border-radius: 8px;
 }
