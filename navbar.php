@@ -17,7 +17,9 @@
     <nav>
         <div class="max-width">
             <div class="logo">
-                <img src="assets/logo.png" alt="Rush Logo" srcset="">
+                <a href="index.php">
+                    <img src="assets/logo.png" alt="Rush Logo" srcset="">
+                </a>
             </div>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -44,61 +46,6 @@
             </div>
         </div>
     </nav>
-
-    <section id="reg" class="reg">
-        <div class="max-width">
-            <div class="content">
-                <div class="img">
-                    <img src="assets/logo.png" alt="Rush Logo" srcset="">
-                </div>
-                <div class="txt">
-                    <h2>My Account</h2>
-                    <p>Home > <a href="#">registration</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="form" class="form">
-        <div class="max-width">
-            <form class="login" action="" method=" post">
-                <h2>Login</h2>
-                <div class="max-width">
-                    <div class="row">
-                        <div class="content">
-                            <label for="Username">Username:</label>
-                            <input type="text" name="uname" placeholder="e.g; _johnisReal">
-                        </div>
-                        <div class="content">
-                            <label for="Email Address">Email Address:</label>
-                            <input type="text" name="" placeholder="e.g; johndoe@gmail.com">
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <form class="register" action="" method="post">
-                <h2>Register</h2>
-                <div class="max-width">
-                    <div class="row">
-                        <div class="content">
-                            <label for="Username">Username:</label>
-                            <input type="text" name="uname" placeholder="e.g; _johnisReal">
-                        </div>
-                        <div class="content">
-                            <label for="Email Address">Email Address:</label>
-                            <input type="text" name="" placeholder="e.g; johndoe@gmail.com">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="content">
-                            <label for="Password">Password:</label>
-                            <input type=" password" name="pwd" placeholder="e.g; J123">
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
 </body>
 
 </html>
