@@ -36,11 +36,11 @@
                 <div class="max-width">
                     <div class="row">
                         <div class="content">
-                            <label for="Username">Username:</label>
+                            <label for="Username">Username:<span style="color: var(--cr);">*</span></label>
                             <input type="text" name="uname">
                         </div>
                         <div class="content">
-                            <label for="Password">Password:</label>
+                            <label for="Password">Password:<span style="color: var(--cr);">*</span></label>
                             <input type="password" name="pwd">
                         </div>
                     </div>
