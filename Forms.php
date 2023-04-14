@@ -45,6 +45,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="forgot">
+                    <a href="#">Did you forget your password?</a>
+                </div>
                 <div class="remind">
                     <input type="checkbox">
                     <p>Remember me</p>
