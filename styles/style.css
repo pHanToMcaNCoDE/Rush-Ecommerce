@@ -41,7 +41,7 @@ nav{
     width: 100%;
     padding: 10px 0;
     background-color: var(--w);
-    border: 1px solid var(--blk);
+    /* border: 1px solid var(--blk); */
 }
 nav .max-width{
     display: flex;
@@ -86,7 +86,7 @@ nav .max-width .icons svg{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 1px solid var(--blk);
+    /* border: 1px solid var(--blk); */
 }
 .reg .max-width{
     display: flex;
@@ -127,22 +127,25 @@ nav .max-width .icons svg{
 # Form Styling 
 ******************************************/
 .form{
-    padding: 70px 0;
-    background-color: var(--w);
+    height: 75vh;
+    padding: 100px 0px;
+    background-color: var(--ash3);
 }
 .form .max-width{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
 }
 .form .max-width .login {
-    /* background-color: var(--w); */
-    width: 50%;
+    background-color: var(--w);
+    width: 43%;
     height: 50vh;
     display: block;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    margin-left: 5%;
 }
 
 .form .max-width .login h2{
@@ -174,7 +177,7 @@ nav .max-width .icons svg{
     border-radius: 8px;
     outline: none;
     border: 1px solid var(--ash1);
-    width: 100%;
+    width: 110%;
     margin-bottom: 5%;
     font-size: 18px;
 }
@@ -194,6 +197,13 @@ nav .max-width .icons svg{
     font-weight: 300;
     color: var(--ash1);
 }
+.form .max-width .login .forgot {
+    margin: 2% 0 0.2% 10%;
+}
+.form .max-width .login .forgot a {
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+}
 .form .max-width .login .btn input{
     padding: 15px 8%;
     background-color: var(--pk);
@@ -205,7 +215,8 @@ nav .max-width .icons svg{
     border-radius: 8px;
 }
 .form .max-width .register {
-    width: 50%;
+    background-color: var(--w);
+    width: 43%;
     height: 50vh;
     display: block;
     justify-content: space-between;
@@ -217,17 +228,18 @@ nav .max-width .icons svg{
     font-weight: 600;
     color: var(--blk);
     padding-bottom: 5%;
-    margin-left: 13%;
+    margin-left: 9%;
+    margin-top: 4%;
 }
 .form .max-width .register .max-width{
     display: block;
 }
 .form .max-width .register .max-width .row{
-    display: flex;
+    display: block;
 }
 .form .max-width .register .max-width .row .content{
     display: block;
-    margin-left: 5%;
+    /* margin-left: 3%; */
 }
 .form .max-width .register .max-width .row .content label {
     font-family: var(--av), sans-serif;
@@ -241,16 +253,17 @@ nav .max-width .icons svg{
     outline: none;
     border: 1px solid var(--ash1);
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     font-size: 18px;
+    /* margin-right: 3%; */
 }
 .form .max-width .register .btn input {
     padding: 15px 8%;
     background-color: var(--pk);
     color: var(--w);
     border: 1px solid var(--pk);
-    margin-top: 3%;
-    margin-left: 12%;
+    margin-top: .5%;
+    margin-left: 10%;
     font-size: 17px;
     border-radius: 8px;
 }
@@ -266,7 +279,6 @@ nav .max-width .icons svg{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem;
     padding: 2rem;
 }
 .footer .max-width h3{
