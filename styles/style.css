@@ -82,11 +82,11 @@ nav .max-width .icons svg{
 
 .reg{
     height: 22vh;
-    background-image: linear-gradient(rgba(210, 75, 75, 0.5) rgba(230, 66, 66, 0.7)), url('assets/regImg.jpg');
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* border: 1px solid var(--blk); */
 }
 .reg .max-width{
     display: flex;
@@ -177,7 +177,7 @@ nav .max-width .icons svg{
     border-radius: 8px;
     outline: none;
     border: 1px solid var(--ash1);
-    width: 120%;
+    width: 100%;
     margin-bottom: 5%;
     font-size: 17px;
     font-family: var(--av), sans-serif;
