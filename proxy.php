@@ -38,9 +38,12 @@ if(isset($_POST['submit'])){
     $pwd = $_POST['pwd'];
 
     if(empty($uname) || empty($email) || empty($pwd)){
-        header("Location: Forms.php");
+        header("Location: Forms.php?msg=empty");
+        exit();
     }else{
-        echo "Error";
+        if(!preg_match("/^[a-zA-Z]*$/", $uname)){
+            header("Location: Forms.php?msg=string");
+        }
     }
 }
 
