@@ -153,7 +153,7 @@ nav .max-width .icons svg{
     font-family: var(--ub), sans-serif;
     font-weight: 600;
     color: var(--blk);
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     margin-left: 9%;
     margin-top: 4%;
     /* text-align: center; */
@@ -177,9 +177,12 @@ nav .max-width .icons svg{
     border-radius: 8px;
     outline: none;
     border: 1px solid var(--ash1);
-    width: 110%;
+    width: 120%;
     margin-bottom: 5%;
-    font-size: 18px;
+    font-size: 17px;
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 .form .max-width .login .remind{
     display: flex;
@@ -227,7 +230,7 @@ nav .max-width .icons svg{
     font-family: var(--ub), sans-serif;
     font-weight: 600;
     color: var(--blk);
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     margin-left: 9%;
     margin-top: 4%;
 }
@@ -254,8 +257,10 @@ nav .max-width .icons svg{
     border: 1px solid var(--ash1);
     width: 100%;
     margin-bottom: 3%;
-    font-size: 18px;
-    /* margin-right: 3%; */
+    font-size: 17px;
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 .form .max-width .register .btn input {
     padding: 15px 8%;
