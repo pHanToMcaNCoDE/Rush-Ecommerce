@@ -1,30 +1,46 @@
 <?php
 
-require("connect.php");
-require("data.php");
+// require("connect.php");
+// require("data.php");
 
-session_start();
+// session_start();
 
-// Registration
+// // Registration
 
-if(isset($_GET['register']) && $_GET['register'] == "done" && isset($_POST['submit'])){
+// if(isset($_GET['register']) && $_GET['register'] == "done" && isset($_POST['submit'])){
     
-    $reg = new Registration();
+//     $reg = new Registration();
     
+//     $uname = $_POST['uname'];
+//     $email = $_POST['email'];
+//     $pwd = $_POST['pwd'];
+
+//     if($reg->getRegistration($uname, $email, $pwd)){
+//         // $_SESSION['status'] = "You've registered successfully";
+//         // $_SESSION['text'] = "Try and Login";
+//         // $_SESSION['success'] = "success";
+//         header("Location: Forms.php");
+//     }else{
+//         // $_SESSION['status'] = "Something went wrong";
+//         // $_SESSION['text'] = "Try again";
+//         // $_SESSION['success'] = "error";
+//         header("Location: Forms.php");
+//     }
+// }
+
+
+if(isset($_POST['submit'])){
+    
+    include_once 'connect.php';
+
     $uname = $_POST['uname'];
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
 
-    if($reg->getRegistration($uname, $email, $pwd)){
-        // $_SESSION['status'] = "You've registered successfully";
-        // $_SESSION['text'] = "Try and Login";
-        // $_SESSION['success'] = "success";
+    if(empty($uname) || empty($email) || empty($pwd)){
         header("Location: Forms.php");
     }else{
-        // $_SESSION['status'] = "Something went wrong";
-        // $_SESSION['text'] = "Try again";
-        // $_SESSION['success'] = "error";
-        header("Location: Forms.php");
+        echo "Error";
     }
 }
 

@@ -82,7 +82,7 @@ nav .max-width .icons svg{
 
 .reg{
     height: 22vh;
-    background-image: linear-gradient(rgba(255, 255, 255, .5) rgba(255, 255, 255, .7)), url('assets/regImg.jpg');
+    background-image: linear-gradient(rgba(210, 75, 75, 0.5) rgba(230, 66, 66, 0.7)), url('assets/regImg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
