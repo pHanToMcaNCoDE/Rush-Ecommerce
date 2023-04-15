@@ -203,7 +203,7 @@ nav .max-width .icons svg{
     width: 100%;
     padding: 10px 0;
     background-color: var(--w);
-    border: 1px solid var(--blk);
+    border-bottom: 1px solid var(--blk);
 }
 .commerceNav .max-width{
     display: flex;
@@ -589,7 +589,7 @@ nav .max-width .icons svg{
 .categ{
     border: none;
     border-right: 1px solid #000;
-    height: 50vh;
+    height: 60vh;
     width: 20vw;
     position: absolute;
     top: 8.5%;
