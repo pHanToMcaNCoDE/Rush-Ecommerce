@@ -59,6 +59,14 @@
                         <a href="#"><p>Fashion</p></a>
                     </div>
                 </div>
+                <div class="content">
+                    <div class="icon">
+                        <img src="assets/categIcons/groc.png" alt="Fashion Icon" srcset="" width="35" height="35">
+                    </div>
+                    <div class="txt">
+                        <a href="#"><p>Groceries</p></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
