@@ -26,10 +26,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
 }
 html{
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 .homeIn{
     background-color: var(--ash3);
@@ -229,6 +229,7 @@ nav .max-width .icons svg{
     font-family: var(--pop), sans-serif;
     font-weight: 300;
     font-size: 17px;
+    text-decoration: none;
 }
 .commerceNav .max-width .search {
     width: 50%;
@@ -589,41 +590,69 @@ nav .max-width .icons svg{
 .categ{
     border: none;
     border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
     height: 60vh;
     width: 20vw;
     position: absolute;
-    top: 8.5%;
+    top: 8.7%;
     left: 10%;
     background-color: var(--w);
 }
 .categ .max-width{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: grid; */
+    /* column-gap: 10rem; */
 }
-.categ .max-width .category{
+.categ .max-width .left{
+    width: 30vw;
+}
+.categ .max-width .left .category{
     display: block;
     justify-content: space-between;
     align-items: center;
     /* padding-top: 15%; */
 }
-.categ .max-width .category h3{
+.categ .max-width .left .category h3{
     font-size: 22px;
     font-weight: 500;
     font-family: var(--av), sans-serif;
-    padding-top: 4%;
+    padding-top: 8%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
-.categ .max-width .category .content{
+.categ .max-width .left .category .content{
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
     margin-top: 15%;
 }
-.categ .max-width .category .content .txt a{
-    list-style: none;
+.categ .max-width .left .category .content .txt a{
+    text-decoration: none;
 }
-.categ .max-width .category .content .txt a p{
+.categ .max-width .left .category .content .txt a p{
     font-size: 17px;
     font-weight: 300;
     font-family: var(--av), sans-serif;
-    margin-left: 8px;
+    margin-left: 5px;
     color: var(--blk);
+}
+
+/* Carousel Styling */
+.categ .max-width .right {
+    width: 70vw;
+    margin: 3em 0 0 6em;
+}
+.categ .max-width .right .carousel{
+    width: 65vw;
+    height: 52vh;
+}
+.categ .max-width .right .carousel .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--w);
+    background-color: var(--cr);
 }
