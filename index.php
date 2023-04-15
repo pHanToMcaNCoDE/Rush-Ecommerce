@@ -79,36 +79,40 @@
             <!-- Carousel -->
         <div class="right">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                    <title>Placeholder</title>
-                                    <rect width="100%" height="100%" fill="#777"></rect>
-                                    <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-                                </svg>
-                            </div>
-                        <div class="carousel-item">
-                            <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="430" src="assets/ads/ads1.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false" style="object-fit: cover;"/>
-                                <!-- <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#666"></rect>
-                                <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
-                            </svg> -->
-                        </div>
-                        <div class="carousel-item active">
-                            <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="430" src="assets/ads/ads2.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false" style="object-fit: cover;"/>
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#555"></rect>
-                                <text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text>
-                            </svg>
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="assets/ads/ads1.jpg" class="d-block w-100" alt="Ads1">
+                    <div class="placedText">
+                        <div class="txt">
+                            <h2>For only #1.99</h2>
+                            <p>You can get your favourite pastries at lower cost</p>
+                            <a href="#">
+                                shop now 
+                                <svg width="19" height="19" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            </a>
                         </div>
                     </div>
+                    </div>
+                    <div class="carousel-item">
+                    <img src="assets/ads/ads2.jpg" class="d-block w-100" alt="...">
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
