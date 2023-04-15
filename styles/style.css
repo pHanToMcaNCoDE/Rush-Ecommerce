@@ -19,6 +19,7 @@
     --m: #e9e5e0;
     --ash3: #f9fafc;
     --cr: crimson;
+    --g: #66B830;
 }
 
 *{
@@ -32,6 +33,114 @@
     padding: 0 50px;
     margin: auto;
 }
+
+/* .errorData: */
+.errorData{
+    width: 20%;
+    position: absolute;
+    top: 33%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid var(--cr);
+    padding: 15px 10px;
+    background-color: var(--w);
+    transition: all .6s ease;
+}
+
+.errorData .errorIcon{
+    font-size: 18px;
+    color: var(--cr);
+}
+.errorData .errorText {
+    font-size: 18px;
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    color: var(--cr);
+    padding-left: 5px;
+}
+
+/* .successData */
+.successData{
+    width: 22%;
+    position: absolute;
+    top: 33%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid var(--g);
+    padding: 15px 15px;
+    background-color: var(--w);
+    transition: all .6s ease;
+}
+.successData .successIcon {
+    font-size: 18px;
+    color: var(--g);
+}
+
+.successData .successText {
+    font-size: 18px;
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    color: var(--g);
+    padding-left: 5px;
+}
+
+/* .errorData: */
+.errData {
+    width: 20%;
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid var(--cr);
+    padding: 15px 10px;
+    background-color: var(--w);
+    transition: all .6s ease;
+}
+.errData .errIcon {
+    font-size: 18px;
+    color: var(--cr);
+}
+
+.errData .errText {
+    font-size: 18px;
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    color: var(--cr);
+    padding-left: 5px;
+}
+
+/* .successData */
+.succData {
+    width: 22%;
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid var(--g);
+    padding: 15px 15px;
+    background-color: var(--w);
+    transition: all .6s ease;
+}
+
+.succData .succIcon {
+    font-size: 18px;
+    color: var(--g);
+}
+
+.succData .succText {
+    font-size: 18px;
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    color: var(--g);
+    padding-left: 5px;
+}
+
+
+
 /********************************************* 
 # Navigation 
 **********************************************/
@@ -83,7 +192,7 @@ nav .max-width .icons svg{
 .reg{
     height: 22vh;
     width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -216,6 +325,7 @@ nav .max-width .icons svg{
     margin-left: 8%;
     font-size: 17px;
     border-radius: 8px;
+    cursor: pointer;
 }
 .form .max-width .register {
     background-color: var(--w);
@@ -262,7 +372,7 @@ nav .max-width .icons svg{
     font-weight: 300;
     letter-spacing: 2px;
 }
-.form .max-width .register .btn input {
+.form .max-width .register .btn input{
     padding: 15px 8%;
     background-color: var(--pk);
     color: var(--w);
@@ -271,6 +381,7 @@ nav .max-width .icons svg{
     margin-left: 10%;
     font-size: 17px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 
