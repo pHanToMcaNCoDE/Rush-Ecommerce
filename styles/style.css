@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
 
 
 :root{
@@ -9,6 +10,7 @@
     --pop: 'Poppins';
     --ub: 'Ubuntu';
     --av: 'Avenir';
+    --rob: 'Roboto';
 
     /* Colors */
     --ash1: #888787;
@@ -647,7 +649,12 @@ nav .max-width .icons svg{
 }
 .categ .max-width .right .carousel{
     width: 65vw;
-    height: 52vh;
+    height: 50vh;
+}
+.categ .max-width .right .carousel img{
+    /* width: 65vw; */
+    object-fit: cover;
+    height: 53vh;
 }
 .categ .max-width .right .carousel .carousel-indicators button{
     width: 10px;
@@ -656,3 +663,55 @@ nav .max-width .icons svg{
     border: 1px solid var(--w);
     background-color: var(--cr);
 }
+.categ .max-width .right .carousel .carousel-inner img{
+    position: relative;
+}
+.categ .max-width .right .carousel .carousel-inner .placedText{
+    position: absolute;
+    top: 30%;
+    right: -15%;
+}
+.categ .max-width .right .carousel .carousel-inner .placedText .txt{
+    display: block;
+    align-items: center;
+}
+.categ .max-width .right .carousel .carousel-inner .placedText .txt h2{
+    color: var(--w);
+    font-family: var(--pop), sans-serif;
+    font-weight: 600;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+.categ .max-width .right .carousel .carousel-inner .placedText .txt p{
+    color: var(--w);
+    font-family: var(--av), sans-serif;
+    font-weight: 300;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: 19px;
+    width: 70%;
+}
+.categ .max-width .right .carousel .carousel-inner .placedText .txt a{
+    /* border: 1px solid var(--w); */
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: var(--av), sans-serif;
+    padding: 8px 12px;
+    text-decoration: underline;
+    text-decoration-color: var(--w);
+    color: var(--w);
+}
+.categ .max-width .right .carousel .carousel-inner .placedText .txt a svg{
+    transition: all .8s;
+}
+.categ .max-width .right .carousel .carousel-inner .placedText .txt a:hover svg{
+    width: 8%;
+    transform: scaleX(1.3);
+}
+
+
+
+
+
