@@ -28,6 +28,12 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
+.homeIn{
+    background-color: var(--ash3);
+}
 .max-width{
     max-width: 1330px;
     padding: 0 50px;
@@ -184,6 +190,73 @@ nav .max-width .icons{
 nav .max-width .icons svg{
     margin-left: 30px;
 }
+
+
+
+/**************************************************** 
+# Commerce Navigation 
+******************************************************/
+
+.commerceNav{
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--w);
+    border: 1px solid var(--blk);
+}
+.commerceNav .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.commerceNav .max-width .logo {
+    display: flex;
+    align-items: center;
+}
+.commerceNav .max-width ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commerceNav .max-width ul li {
+    list-style: none;
+}
+.commerceNav .max-width ul li a {
+    margin-left: 20px;
+    color: var(--blk);
+    font-family: var(--pop), sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+.commerceNav .max-width .search {
+    width: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+.commerceNav .max-width .search input{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--av), sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    outline: none;
+    margin-right: 7px;
+    border: none;
+}
+.commerceNav .max-width .commerceIcons{
+    display: flex;
+}
+/* .commerceNav .max-width .commerceIcons .theIcons ul li a img{
+    margin-left: 30px;
+} */
+
 
 /**************************************************** 
 # Header section 
@@ -384,8 +457,9 @@ nav .max-width .icons svg{
     cursor: pointer;
 }
 
-
-/* Footer section */
+/***************************************** 
+# Footer section
+******************************************/
 
 .footer{
     height: 35vh;
@@ -506,4 +580,50 @@ nav .max-width .icons svg{
     font-family: var(--pop), sans-serif;
     font-size: 16px;
     text-align-last: left;
+}
+
+/***************************************** 
+# Category section
+******************************************/
+
+.categ{
+    border: none;
+    border-right: 1px solid #000;
+    height: 50vh;
+    width: 20vw;
+    position: absolute;
+    top: 8.5%;
+    left: 10%;
+    background-color: var(--w);
+}
+.categ .max-width{
+    display: flex;
+}
+.categ .max-width .category{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 15%; */
+}
+.categ .max-width .category h3{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: var(--av), sans-serif;
+    padding-top: 4%;
+}
+.categ .max-width .category .content{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 15%;
+}
+.categ .max-width .category .content .txt a{
+    list-style: none;
+}
+.categ .max-width .category .content .txt a p{
+    font-size: 17px;
+    font-weight: 300;
+    font-family: var(--av), sans-serif;
+    margin-left: 8px;
+    color: var(--blk);
 }
