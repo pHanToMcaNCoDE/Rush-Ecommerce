@@ -823,7 +823,8 @@ nav .max-width .right .icons svg{
         .form {
             height: 70vh;
             background-color: var(--ash3);
-            padding: 100px 0;
+            position: absolute;
+            bottom: 0%;
         }
         .form .max-width {
             display: block;
