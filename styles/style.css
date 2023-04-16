@@ -33,6 +33,13 @@ html{
     scroll-behavior: smooth;
     text-decoration: none;
 }
+html,
+body,
+#background{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--ash3);
+}
 .homeIn{
     background-color: var(--ash3);
 }
@@ -279,10 +286,13 @@ nav .max-width .right .icons svg{
 .reg{
     height: 22vh;
     width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg');
+    background-image: url('/assets/reg.jpg');
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-size: 10px 20px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)),;
 }
 .reg .max-width{
     display: flex;
@@ -823,8 +833,8 @@ nav .max-width .right .icons svg{
         .form {
             height: 70vh;
             background-color: var(--ash3);
-            position: absolute;
-            bottom: 0%;
+            /* position: absolute;
+            bottom: 0%; */
         }
         .form .max-width {
             display: block;
@@ -847,7 +857,7 @@ nav .max-width .right .icons svg{
         .form .max-width .login .row .content {
             display: block;
         }
-        .form .max-width .login .row .content input {
+        .form .max-width .login .row .content input{
             padding: 10px 20px;
             border-radius: 8px;
             outline: none;
@@ -921,10 +931,11 @@ nav .max-width .right .icons svg{
         .form .max-width .register {
             background-color: var(--w);
             width: 100%;
-            height: 62vh;
+            height: 78vh;
             display: block;
             justify-content: space-between;
             align-items: center;
+            margin-top: 3em;
         }
         .form .max-width .register h2 {
             font-size: 25px;
@@ -957,7 +968,7 @@ nav .max-width .right .icons svg{
         }
     
         .form .max-width .register .max-width .row .content input {
-            padding: 15px 20px;
+            padding: 10px 20px;
             border-radius: 8px;
             outline: none;
             border: 1px solid var(--ash1);
