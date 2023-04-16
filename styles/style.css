@@ -165,31 +165,42 @@ nav .max-width{
     justify-content: space-between;
     align-items: center;
 }
+nav .max-width .left{
+    display: flex;
+    width: 50%;
+}
+nav .max-width .right{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
 nav .max-width .logo{
     display: flex;
     align-items: center;
 }
-nav .max-width ul{
+nav .max-width .right ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav .max-width ul li{
+nav .max-width .right ul li{
     list-style: none;
 }
-nav .max-width ul li a{
+nav .max-width .right ul li a{
+    text-decoration: none;
     margin-left: 60px;
     color: var(--blk);
     font-family: var(--pop),sans-serif;
     font-weight: 300;
     font-size: 17px;
 }
-nav .max-width .icons{
+nav .max-width .right .icons{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav .max-width .icons svg{
+nav .max-width .right .icons svg{
     margin-left: 30px;
 }
 
@@ -378,13 +389,13 @@ nav .max-width .icons svg{
 }
 .form .max-width .login .remind p{
     margin: 2% 0 0 2%;
-}
-.form .max-width .login .remind p{
     font-family: var(--pop), sans-serif;
     font-size: 17px;
     font-weight: 300;
     color: var(--ash1);
 }
+
+
 .form .max-width .login .forgot {
     margin: 2% 0 0.2% 10%;
 }
@@ -712,6 +723,422 @@ nav .max-width .icons svg{
 }
 
 
+/********************************************************* 
+# Responsive Design 
+**********************************************************/
 
+@media only screen and (min-width: 320px) and (max-width:480px){
+
+    nav .max-width .logo img{
+        width: 40px;
+        height: 40px;
+    }
+    nav .max-width .right{
+        display: block;
+        background-color: var(--ash1);
+        height: 100vh;
+        width: 100%;
+        /* width: 100%; */
+        position: fixed;
+        top: 0;
+        /* right: 0; */
+        left: 0;
+        display: none;
+        z-index: 999;
+        /* bottom: 0; */
+    }
+    nav .max-width .right ul{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20%;
+    }
+    nav .max-width .right ul li{
+        margin-top: 4em;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+    nav .max-width .right ul li a{
+        text-align: center;
+        font-size: 20px;
+    }
+    nav .max-width .right .icons{
+        display: flex;
+        align-items: center;
+        margin-right: 2em;
+    }
+
+
+    /* Reg Header */
+    .reg {
+        height: 25vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .reg .max-width {
+        display: flex;
+    }
+
+    .reg .max-width .content {
+        position: absolute;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        top: 8%;
+        left: 30%;
+        padding: 20px 0;
+    }
+
+    .reg .max-width .content .img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    /* .reg .max-width .content .txt {
+    } */
+
+    .reg .max-width .content .txt h2 {
+        margin-bottom: 5%;
+        text-align: center;
+        font-family: var(--ub), sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        color: var(--blk);
+    }
+
+    .reg .max-width .content .txt p {
+        /* text-align: center; */
+        font-family: var(--pop), sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--ash1);
+    }
+
+    /* Forms */
+
+        .form {
+            height: 70vh;
+            background-color: var(--ash3)
+            
+        }
+    
+        .form .max-width {
+            display: block;
+            margin: auto;;
+        }
+    
+        .form .max-width .login {
+            width: 100%;
+            height: 62vh;
+            display: block;
+            background-color: var(--w);
+        }
+    
+        .form .max-width .login h2 {
+            font-size: 20px;
+            /* font-family: var(--ub), sans-serif;
+            font-weight: 600;
+            color: var(--blk);
+            padding-bottom: 3%;
+            margin-left: 9%;
+            margin-top: 4%; */
+            /* text-align: center; */
+        }
+    
+        .form .max-width .login .row {
+            display: block;
+        }
+    
+        .form .max-width .login .row .content {
+            display: block;
+        }
+    
+        /* .form .max-width .login .row .content label {
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+            font-size: 17px;
+            margin-bottom: 3%;
+        } */
+    
+        .form .max-width .login .row .content input {
+            padding: 10px 20px;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid var(--ash1);
+            width: 100%;
+            margin-bottom: 5%;
+            font-size: 16px;
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+    
+        .form .max-width .login .remind {
+            display: flex;
+        }
+    
+        .form .max-width .login .remind input {
+            margin-top: 3%;
+            margin-left: 8%;
+        }
+    
+        .form .max-width .login .remind p {
+            margin: 2% 0 0 2%;
+        }
+    
+        .form .max-width .login .remind p {
+            font-family: var(--pop), sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--ash1);
+        }
+    
+        .form .max-width .login .forgot {
+            margin: 2% 0 0.2% 10%;
+        }
+    
+        .form .max-width .login .forgot a {
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+        }
+    
+        .form .max-width .login .btn input {
+            padding: 8px 6%;
+            background-color: var(--pk);
+            color: var(--w);
+            border: 1px solid var(--pk);
+            margin-top: 5%;
+            margin-left: 3em;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .form .max-width .login .remind {
+            display: flex;
+        }
+
+        .form .max-width .login .remind input {
+            margin-top: 3%;
+            margin-left: 4em;
+        }
+
+        .form .max-width .login .remind p {
+            margin: 2% 0 0 2%;
+            font-family: var(--pop), sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--ash1);
+        }
+
+    
+        .form .max-width .register {
+            background-color: var(--w);
+            width: 100%;
+            height: 62vh;
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .form .max-width .register h2 {
+            font-size: 25px;
+            font-family: var(--ub), sans-serif;
+            font-weight: 600;
+            color: var(--blk);
+            padding-bottom: 3%;
+            margin-left: 9%;
+            margin-top: 4%;
+        }
+    
+        .form .max-width .register .max-width {
+            display: block;
+        }
+    
+        .form .max-width .register .max-width .row {
+            display: block;
+        }
+    
+        .form .max-width .register .max-width .row .content {
+            display: block;
+            /* margin-left: 3%; */
+        }
+    
+        .form .max-width .register .max-width .row .content label {
+            font-family: var(--av), sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            margin-bottom: 3%;
+        }
+    
+        .form .max-width .register .max-width .row .content input {
+            padding: 15px 20px;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid var(--ash1);
+            width: 100%;
+            margin-bottom: 3%;
+            font-size: 17px;
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+    
+        .form .max-width .register .btn input {
+            padding: 8px 6%;
+            background-color: var(--pk);
+            color: var(--w);
+            border: 1px solid var(--pk);
+            margin-top: 5%;
+            margin-left: 3em;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+                /***************************************** 
+        # Footer section
+        ******************************************/
+
+        .footer {
+            margin-top: 30em;
+            height: 120vh;
+        }
+
+        .footer .max-width {
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .footer .max-width h3 {
+            font-size: 17px;
+            font-family: var(--pop), sans-serif;
+            font-weight: 300;
+            color: var(--ash1);
+            padding: 1rem;
+        }
+
+        .footer .max-width .links {
+            display: block;
+        }
+
+        .footer .max-width .links h4 {
+            font-size: 16px;
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+            margin-bottom: 1em;
+            color: var(--ash1);
+        }
+
+        .footer .max-width .links ul li {
+            list-style: none;
+        }
+
+        .footer .max-width .links ul li a {
+            font-size: 17px;
+            color: var(--blk);
+            margin-top: 2rem;
+            font-family: var(--pop), sans-serif;
+            font-weight: 300;
+        }
+
+        .footer .max-width .help {
+            display: block;
+        }
+
+        .footer .max-width .help h4 {
+            font-size: 16px;
+        }
+
+        .footer .max-width .help ul li {
+            list-style: none;
+        }
+
+        .footer .max-width .help ul li a {
+            font-size: 17px;
+            color: var(--blk);
+            margin-top: 2rem;
+            font-family: var(--pop), sans-serif;
+            font-weight: 300;
+        }
+
+        .footer .max-width .newsletter {
+            display: block;
+        }
+
+        .footer .max-width .newsletter h4 {
+            font-size: 16px;
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+            margin-bottom: 1em;
+            color: var(--ash1);
+        }
+
+        .footer .max-width .newsletter .input {
+            display: flex;
+        }
+
+        .footer .max-width .newsletter .input input {
+            width: 18vw;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid var(--blk);
+            background-color: var(--m);
+        }
+
+        .footer .max-width .newsletter .input input:focus {
+            border-left-color: var(--m);
+            border-right-color: var(--m);
+            border-top-color: var(--m);
+        }
+
+        .footer .max-width .newsletter .input a {
+            margin-left: 1rem;
+            color: var(--ash1);
+            font-size: 17px;
+            font-family: var(--ub), sans-serif;
+        }
+
+        .footer .max-width .newsletter ul li a {
+            font-size: 17px;
+            color: var(--blk);
+            margin-top: 1rem;
+            font-family: var(--pop), sans-serif;
+            font-weight: 300;
+        }
+
+        .footer .max-width .newsletter h4 {
+            font-size: 17px;
+            font-family: var(--av), sans-serif;
+            font-weight: 300;
+            margin-bottom: 1em;
+            color: var(--ash1);
+        }
+
+        .footer .line {
+            content: '';
+            position: absolute;
+            left: 30px;
+            width: 95vw;
+            height: 1px;
+            background-color: var(--ash1);
+        }
+
+        .footer .down {
+            margin: 3%;
+        }
+
+        .footer .down p {
+            color: var(--ash1);
+            font-weight: 300;
+            font-family: var(--pop), sans-serif;
+            font-size: 16px;
+            text-align-last: left;
+        }
+    }
 
 
