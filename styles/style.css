@@ -822,10 +822,9 @@ nav .max-width .right .icons svg{
 
         .form {
             height: 70vh;
-            background-color: var(--ash3)
-            
+            background-color: var(--ash3);
+            padding: 100px 0;
         }
-    
         .form .max-width {
             display: block;
             margin: auto;;
@@ -840,30 +839,13 @@ nav .max-width .right .icons svg{
     
         .form .max-width .login h2 {
             font-size: 20px;
-            /* font-family: var(--ub), sans-serif;
-            font-weight: 600;
-            color: var(--blk);
-            padding-bottom: 3%;
-            margin-left: 9%;
-            margin-top: 4%; */
-            /* text-align: center; */
         }
-    
         .form .max-width .login .row {
             display: block;
         }
-    
         .form .max-width .login .row .content {
             display: block;
         }
-    
-        /* .form .max-width .login .row .content label {
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-            font-size: 17px;
-            margin-bottom: 3%;
-        } */
-    
         .form .max-width .login .row .content input {
             padding: 10px 20px;
             border-radius: 8px;
@@ -1139,6 +1121,6 @@ nav .max-width .right .icons svg{
             font-size: 16px;
             text-align-last: left;
         }
-    }
+}
 
 
