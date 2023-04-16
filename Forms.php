@@ -51,7 +51,7 @@
                     <input type="checkbox">
                     <p>Remember me</p>
                 </div>
-                <div class=" btn">
+                <div class="btn">
                     <input type="submit" value="Login" name="submit">
                 </div>
                 <a href="#"></a>
