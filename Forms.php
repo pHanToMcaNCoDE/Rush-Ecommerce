@@ -17,8 +17,9 @@
 </head>
 
 <body>
-    <section id="reg" class="reg">
-        <div class="max-width">
+    <section id="reg" class="reg" id="background"
+        style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <div class=" max-width">
             <div class="content">
                 <div class="img">
                     <img src="assets/logo.png" alt="Rush Logo" srcset="">

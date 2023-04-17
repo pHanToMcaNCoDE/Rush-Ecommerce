@@ -783,10 +783,6 @@ nav .max-width .right .icons svg{
     .reg {
         height: 25vh;
         width: 100%;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
     }
 
     .reg .max-width {
@@ -1132,7 +1128,7 @@ nav .max-width .right .icons svg{
             font-family: var(--pop), sans-serif;
             font-size: 16px;
             text-align-last: left;
-        }
+        }2
 }
 
 
