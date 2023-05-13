@@ -4,6 +4,12 @@
 
 ?>
 
+<!-- <style>
+.reg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.7)), url('/assets/reg.jpg');
+
+}
+</style> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +23,8 @@
 </head>
 
 <body>
-    <section id="reg" class="reg" id="background"
-        style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url('/assets/reg.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <section id="reg" class="reg">
+        <img src="assets/regImg.jpg" style="z-index: -1; width: 100%; height: 40vh; object-fit: cover;">
         <div class=" max-width">
             <div class="content">
                 <div class="img">
