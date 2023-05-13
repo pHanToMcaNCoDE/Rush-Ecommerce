@@ -284,15 +284,13 @@ nav .max-width .right .icons svg{
 ******************************************************/
 
 .reg{
-    height: 22vh;
+    height: 40vh;
     width: 100%;
-    background-image: url('/assets/reg.jpg');
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
     background-size: 10px 20px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)),;
 }
 .reg .max-width{
     display: flex;
@@ -319,22 +317,22 @@ nav .max-width .right .icons svg{
     font-family: var(--ub), sans-serif;
     font-size: 30px;
     font-weight: 400;
-    color: var(--blk);
+    color: var(--w);
 }
 .reg .max-width .content .txt p{
     /* text-align: center; */
     font-family: var(--pop), sans-serif;
     font-size: 17px;
     font-weight: 400;
-    color: var(--ash1);
+    color: var(--w);
 }
 
 /***************************************** 
 # Form Styling 
 ******************************************/
 .form{
-    height: 75vh;
-    padding: 100px 0px;
+    height: 100vh;
+    padding: 100% 0px;
     background-color: var(--ash3);
 }
 .form .max-width{
@@ -783,6 +781,10 @@ nav .max-width .right .icons svg{
     .reg {
         height: 25vh;
         width: 100%;
+    }
+
+    .reg img{
+        height: 25vh;
     }
 
     .reg .max-width {
