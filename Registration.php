@@ -25,6 +25,9 @@
                 if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                     header("Location: Registration.php?signup=email");
                     exit();
+                }else if(strlen($pwd) > 8){
+                    header("Location: Registration.php?signup=pwd");
+                    exit();
                 }else{
                     if($connection->query($sql)){
                         header("Location: Login.php?signup=success");
@@ -195,6 +198,12 @@
                             else if($check == "email"){
                                 
                                 echo "<p id='err'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Invalid E-mail Address<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
+                                exit();
+                                
+                            }
+                            else if($check == "pwd"){
+                                
+                                echo "<p id='err'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Password ust not exceed 8 characters!m<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
                                 exit();
                                 
                             }
