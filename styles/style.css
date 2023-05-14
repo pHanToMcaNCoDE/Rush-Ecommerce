@@ -21,6 +21,9 @@
     --m: #e9e5e0;
     --ash3: #f9fafc;
     --cr: crimson;
+    --cr2: rgb(247, 128, 152);
+    --g2: #d1f1bc;
+    --g2: #d1f1bc;
     --g: #66B830;
 }
 
@@ -47,111 +50,6 @@ body,
     max-width: 1330px;
     padding: 0 50px;
     margin: auto;
-}
-
-/* .errorData: */
-.errorData{
-    width: 20%;
-    position: absolute;
-    top: 33%;
-    right: 5%;
-    display: flex;
-    align-items: center;
-    border-left: 4px solid var(--cr);
-    padding: 15px 10px;
-    background-color: var(--w);
-    transition: all .6s ease;
-}
-
-.errorData .errorIcon{
-    font-size: 18px;
-    color: var(--cr);
-}
-.errorData .errorText {
-    font-size: 18px;
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-    color: var(--cr);
-    padding-left: 5px;
-}
-
-/* .successData */
-.successData{
-    width: 22%;
-    position: absolute;
-    top: 33%;
-    right: 5%;
-    display: flex;
-    align-items: center;
-    border-left: 4px solid var(--g);
-    padding: 15px 15px;
-    background-color: var(--w);
-    transition: all .6s ease;
-}
-.successData .successIcon {
-    font-size: 18px;
-    color: var(--g);
-}
-
-.successData .successText {
-    font-size: 18px;
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-    color: var(--g);
-    padding-left: 5px;
-}
-
-/* .errorData: */
-.errData {
-    width: 20%;
-    position: absolute;
-    top: 33%;
-    left: 5%;
-    display: flex;
-    align-items: center;
-    border-left: 4px solid var(--cr);
-    padding: 15px 10px;
-    background-color: var(--w);
-    transition: all .6s ease;
-}
-.errData .errIcon {
-    font-size: 18px;
-    color: var(--cr);
-}
-
-.errData .errText {
-    font-size: 18px;
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-    color: var(--cr);
-    padding-left: 5px;
-}
-
-/* .successData */
-.succData {
-    width: 22%;
-    position: absolute;
-    top: 33%;
-    left: 5%;
-    display: flex;
-    align-items: center;
-    border-left: 4px solid var(--g);
-    padding: 15px 15px;
-    background-color: var(--w);
-    transition: all .6s ease;
-}
-
-.succData .succIcon {
-    font-size: 18px;
-    color: var(--g);
-}
-
-.succData .succText {
-    font-size: 18px;
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-    color: var(--g);
-    padding-left: 5px;
 }
 
 
@@ -284,7 +182,7 @@ nav .max-width .right .icons svg{
 ******************************************************/
 
 .reg{
-    height: 40vh;
+    height: 25vh;
     width: 100%;
     background-color: #ffffff;
     background-repeat: no-repeat;
@@ -332,100 +230,20 @@ nav .max-width .right .icons svg{
 ******************************************/
 .form{
     height: 100vh;
-    padding: 100% 0px;
+    padding: 100px 0;
     background-color: var(--ash3);
 }
+
 .form .max-width{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
-}
-.form .max-width .login {
-    background-color: var(--w);
-    width: 43%;
-    height: 50vh;
-    display: block;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    margin-left: 5%;
 }
 
-.form .max-width .login h2{
-    font-size: 25px;
-    font-family: var(--ub), sans-serif;
-    font-weight: 600;
-    color: var(--blk);
-    padding-bottom: 3%;
-    margin-left: 9%;
-    margin-top: 4%;
-    /* text-align: center; */
-}
-
-.form .max-width .login .row {
-    display: block;
-}
-
-.form .max-width .login .row .content {
-    display: block;
-}
-.form .max-width .login .row .content label{
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    margin-bottom: 3%;
-}
-.form .max-width .login .row .content input {
-    padding: 15px 20px;
-    border-radius: 8px;
-    outline: none;
-    border: 1px solid var(--ash1);
-    width: 100%;
-    margin-bottom: 5%;
-    font-size: 17px;
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-.form .max-width .login .remind{
-    display: flex;
-}
-.form .max-width .login .remind input{
-    margin-top: 3%;
-    margin-left: 8%;
-}
-.form .max-width .login .remind p{
-    margin: 2% 0 0 2%;
-    font-family: var(--pop), sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--ash1);
-}
-
-
-.form .max-width .login .forgot {
-    margin: 2% 0 0.2% 10%;
-}
-.form .max-width .login .forgot a {
-    font-family: var(--av), sans-serif;
-    font-weight: 300;
-}
-.form .max-width .login .btn input{
-    padding: 15px 8%;
-    background-color: var(--pk);
-    color: var(--w);
-    border: 1px solid var(--pk);
-    margin-top: 3%;
-    margin-left: 8%;
-    font-size: 17px;
-    border-radius: 8px;
-    cursor: pointer;
-}
 .form .max-width .register {
     background-color: var(--w);
     width: 43%;
-    height: 50vh;
+    height: 55vh;
     display: block;
     justify-content: space-between;
     align-items: center;
@@ -478,6 +296,10 @@ nav .max-width .right .icons svg{
     border-radius: 8px;
     cursor: pointer;
 }
+
+
+
+
 
 /***************************************** 
 # Footer section
