@@ -1,7 +1,7 @@
 <?php
 
 
-class Registration{
+class Forms{
     
     public function getRegistration($uname, $email, $pwd){
         
@@ -11,7 +11,7 @@ class Registration{
             die("Cannot connect to the database ".$connection->connect_error);
         }else{
             
-            $sql = "INSERT INTO `Registration`(`UserName`, `Email_Address`, `Password`) VALUES ('".$uname."','".$email."','".$pwd."');";
+            $sql = "INSERT INTO `Forms`(`UserName`, `Email_Address`, `Password`) VALUES ('".$uname."','".$email."','".$pwd."');";
 
 
             if($connection->query($sql)){
@@ -22,6 +22,9 @@ class Registration{
         }
         $connection->close();
     }
+
+
+
 }
 
 
