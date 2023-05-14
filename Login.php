@@ -1,5 +1,4 @@
 <?php
-
 ini_set("display_errors", "On");
 
     if(isset($_POST['submit'])){
@@ -44,48 +43,35 @@ ini_set("display_errors", "On");
 
 ?>
 <?php
+
     require("navbar.php");
+
 ?>
 
 <style>
+html {
+
+    overflow-x: hidden;
+}
+
 :root {
 
     --cr2: rgb(247, 128, 152);
     --g2: #d1f1bc;
 }
 
-#err {
-    z-index: 999;
-    position: absolute;
-    top: 33%;
-    left: 20%;
-    transform: translate(50%, 1%);
-    width: 25%;
-    padding: 20px;
-    align-items: center;
-    background-color: var(--cr2);
-    border: 1px solid var(--cr);
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: var(--av), sans-serif;
-    color: var(--cr);
-}
 
-#err .fa-xmark {
-    cursor: pointer;
+.max-width {
+    max-width: 1330px;
+    padding: 0 50px;
+    margin: auto;
 }
-
-#err.active {
-    display: none;
-}
-
 
 #errlog {
     z-index: 999;
     position: absolute;
-    top: 33%;
-    left: 20%;
+    top: 35%;
+    left: 24%;
     transform: translate(50%, 1%);
     width: 25%;
     padding: 20px;
@@ -107,7 +93,7 @@ ini_set("display_errors", "On");
     display: none;
 }
 
-#suc {
+/* #suc {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,13 +118,10 @@ ini_set("display_errors", "On");
 
 #suc.active {
     display: none;
-}
-
-
+} */
 
 .log {
-    height: 100vh;
-    padding: 100px 0;
+    height: 90vh;
     background-color: var(--ash3);
 }
 
@@ -241,15 +224,16 @@ ini_set("display_errors", "On");
 
 <body>
     <section id="reg" class="reg">
-        <img src="assets/regImg.jpg" style="top: 10px; z-index: -1; width: 100%; height: 190px; object-fit: cover;">
+        <img src="assets/regImg.jpg"
+            style="top: 10px; z-index: -1; width: 100%; height: 190px; object-fit: cover; background: linear-gradient(rgba(0,0,0,.5) rgba(0,0,0,.8));">
         <div class=" max-width">
             <div class="content">
                 <div class="img">
-                    <img src="assets/logo.png" alt="Rush Logo" srcset="">
+                    <img src="assets/logo.png" alt="Rush Logo" style="background: var(--w);">
                 </div>
                 <div class="txt">
-                    <h2>My Account</h2>
-                    <p><a href="#">Home</a> > registration</p>
+                    <h2 style="color: var(--w);">My Account</h2>
+                    <p style="color: var(--w);"><a href=" #">Home</a> > registration</p>
                 </div>
             </div>
         </div>
@@ -287,15 +271,16 @@ ini_set("display_errors", "On");
     <?php
         
     require("footer.php");
-    include("script.php");
 
     
     ?>
     <?php
 
-                        if(isset($_GET['signin'])){
+                        if(!isset($_GET['signin'])){
+                            exit();
+                        }else{
                             
-                            $sigin = $_GET['signin'];
+                            $signin = $_GET['signin'];
 
                             if($signin == "empty"){
                                 
@@ -322,8 +307,6 @@ ini_set("display_errors", "On");
                                     </div>";
                                 exit();
                             }
-                        }else{
-                            exit();
                         }
                     ?>
 
