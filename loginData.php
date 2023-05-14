@@ -8,7 +8,7 @@ class Login{
     // public $email;
     // public $pwd;
 
-    public function getLogin($email, $pwd){
+    public function getLogin($uname, $pwd){
         
         $connection = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
 
@@ -16,7 +16,7 @@ class Login{
             die("Cannot connect to the database ".$connection->connect_error);
         }else{
             
-            $sql = "SELECT `UserName`, `Email_Address`, `Password` FROM `Registration` WHERE `Email_Address` = '".$email."'";
+            $sql = "SELECT `UserName`, `Email_Address`, `Password` FROM `Forms` WHERE `UserName` = '$uname' AND `Password` = '$pwd'";
 
             $result = $connection->query($sql);
             $count = $result->num_rows;
