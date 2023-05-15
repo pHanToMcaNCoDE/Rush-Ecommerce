@@ -53,125 +53,6 @@ body,
 }
 
 
-
-/********************************************* 
-# Navigation 
-**********************************************/
-nav{
-    position: sticky;
-    height: 70px;
-    width: 100%;
-    padding: 10px 0;
-    background-color: var(--w);
-    /* border: 1px solid var(--blk); */
-}
-nav .max-width{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav .max-width .left{
-    display: flex;
-    width: 50%;
-}
-nav .max-width .right{
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
-}
-nav .max-width .logo{
-    display: flex;
-    align-items: center;
-}
-nav .max-width .right ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav .max-width .right ul li{
-    list-style: none;
-}
-nav .max-width .right ul li a{
-    text-decoration: none;
-    margin-left: 60px;
-    color: var(--blk);
-    font-family: var(--pop),sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-}
-nav .max-width .right .icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-nav .max-width .right .icons svg{
-    margin-left: 30px;
-}
-
-
-
-/**************************************************** 
-# Commerce Navigation 
-******************************************************/
-
-.commerceNav{
-    position: absolute;
-    height: 70px;
-    width: 100%;
-    padding: 10px 0;
-    background-color: var(--w);
-    border-bottom: 1px solid var(--blk);
-}
-.commerceNav .max-width{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.commerceNav .max-width .logo {
-    display: flex;
-    align-items: center;
-}
-.commerceNav .max-width ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.commerceNav .max-width ul li {
-    list-style: none;
-}
-.commerceNav .max-width ul li a {
-    margin-left: 20px;
-    color: var(--blk);
-    font-family: var(--pop), sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    text-decoration: none;
-}
-.commerceNav .max-width .search {
-    width: 50%;
-    border: 1px solid #000;
-    display: flex;
-    align-items: center;
-    padding: 5px 20px;
-    border-radius: 20px;
-}
-.commerceNav .max-width .search input{
-    width: 100%;
-    padding: 5px 10px;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: var(--av), sans-serif;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    outline: none;
-    margin-right: 7px;
-    border: none;
-}
-.commerceNav .max-width .commerceIcons{
-    display: flex;
-}
 /* .commerceNav .max-width .commerceIcons .theIcons ul li a img{
     margin-left: 30px;
 } */
@@ -432,30 +313,27 @@ nav .max-width .right .icons svg{
 
 .categ{
     border: none;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
-    height: 60vh;
+    height: 100vh;
     width: 20vw;
-    position: absolute;
-    top: 8.7%;
     left: 10%;
-    background-color: var(--w);
 }
 .categ .max-width{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* display: grid; */
-    /* column-gap: 10rem; */
 }
 .categ .max-width .left{
     width: 30vw;
+    background-color: var(--w);
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
 }
 .categ .max-width .left .category{
     display: block;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 10px;
     /* padding-top: 15%; */
 }
 .categ .max-width .left .category h3{
@@ -486,10 +364,10 @@ nav .max-width .right .icons svg{
 /* Carousel Styling */
 .categ .max-width .right {
     width: 70vw;
-    margin: 3em 0 0 6em;
+    margin: 1em 0 0 4em;
 }
 .categ .max-width .right .carousel{
-    width: 65vw;
+    width: 70vw;
     height: 50vh;
 }
 .categ .max-width .right .carousel img{
@@ -598,6 +476,31 @@ nav .max-width .right .icons svg{
         margin-right: 2em;
     }
 
+    /* Commerce Nav */
+
+
+    .commerceNav .max-width{
+        position: fixed;
+        z-index: 999;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--w);
+        border: 2px solid var(--blk);
+        display: block;
+    }
+    .commerceNav .max-width .links{
+        display: block;
+        margin: 25px;
+    }
+    .commerceNav .max-width .links li a{
+        margin-top: 25px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .commerceNav .max-width .search{
+        width: 15rem;
+        margin: 20px 10px 20px 0px;
+    }
 
     /* Reg Header */
     .reg {
@@ -649,316 +552,326 @@ nav .max-width .right .icons svg{
     }
 
     /* Forms */
+    .form {
+        height: 70vh;
+        background-color: var(--ash3);
+        /* position: absolute;
+        bottom: 0%; */
+    }
+    .form .max-width {
+        display: block;
+        margin: auto;;
+    }
 
-        .form {
-            height: 70vh;
-            background-color: var(--ash3);
-            /* position: absolute;
-            bottom: 0%; */
-        }
-        .form .max-width {
-            display: block;
-            margin: auto;;
-        }
-    
-        .form .max-width .login {
-            width: 100%;
-            height: 62vh;
-            display: block;
-            background-color: var(--w);
-        }
-    
-        .form .max-width .login h2 {
-            font-size: 20px;
-        }
-        .form .max-width .login .row {
-            display: block;
-        }
-        .form .max-width .login .row .content {
-            display: block;
-        }
-        .form .max-width .login .row .content input{
-            padding: 10px 20px;
-            border-radius: 8px;
-            outline: none;
-            border: 1px solid var(--ash1);
-            width: 100%;
-            margin-bottom: 5%;
-            font-size: 16px;
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-    
-        .form .max-width .login .remind {
-            display: flex;
-        }
-    
-        .form .max-width .login .remind input {
-            margin-top: 3%;
-            margin-left: 8%;
-        }
-    
-        .form .max-width .login .remind p {
-            margin: 2% 0 0 2%;
-        }
-    
-        .form .max-width .login .remind p {
-            font-family: var(--pop), sans-serif;
-            font-size: 17px;
-            font-weight: 300;
-            color: var(--ash1);
-        }
-    
-        .form .max-width .login .forgot {
-            margin: 2% 0 0.2% 10%;
-        }
-    
-        .form .max-width .login .forgot a {
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-        }
-    
-        .form .max-width .login .btn input {
-            padding: 8px 6%;
-            background-color: var(--pk);
-            color: var(--w);
-            border: 1px solid var(--pk);
-            margin-top: 5%;
-            margin-left: 3em;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .form .max-width .login .remind {
-            display: flex;
-        }
+    .form .max-width .login {
+        width: 100%;
+        height: 62vh;
+        display: block;
+        background-color: var(--w);
+    }
 
-        .form .max-width .login .remind input {
-            margin-top: 3%;
-            margin-left: 4em;
-        }
+    .form .max-width .login h2 {
+        font-size: 20px;
+    }
+    .form .max-width .login .row {
+        display: block;
+    }
+    .form .max-width .login .row .content {
+        display: block;
+    }
+    .form .max-width .login .row .content input{
+        padding: 10px 20px;
+        border-radius: 8px;
+        outline: none;
+        border: 1px solid var(--ash1);
+        width: 100%;
+        margin-bottom: 5%;
+        font-size: 16px;
+        font-family: var(--av), sans-serif;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
 
-        .form .max-width .login .remind p {
-            margin: 2% 0 0 2%;
-            font-family: var(--pop), sans-serif;
-            font-size: 15px;
-            font-weight: 300;
-            color: var(--ash1);
-        }
+    .form .max-width .login .remind {
+        display: flex;
+    }
 
-    
-        .form .max-width .register {
-            background-color: var(--w);
-            width: 100%;
-            height: 78vh;
-            display: block;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 3em;
-            margin-left: 10%;
-        }
-        .form .max-width .register h2 {
-            font-size: 25px;
-            font-family: var(--ub), sans-serif;
-            font-weight: 600;
-            color: var(--blk);
-            padding-bottom: 3%;
-            margin-left: 9%;
-            margin-top: 4%;
-        }
-    
-        .form .max-width .register .max-width {
-            display: block;
-        }
-    
-        .form .max-width .register .max-width .row {
-            display: block;
-        }
-    
-        .form .max-width .register .max-width .row .content {
-            display: block;
-            /* margin-left: 3%; */
-        }
-    
-        .form .max-width .register .max-width .row .content label {
-            font-family: var(--av), sans-serif;
-            font-weight: 400;
-            font-size: 17px;
-            margin-bottom: 3%;
-        }
-    
-        .form .max-width .register .max-width .row .content input {
-            padding: 10px 20px;
-            border-radius: 8px;
-            outline: none;
-            border: 1px solid var(--ash1);
-            width: 100%;
-            margin-bottom: 3%;
-            font-size: 17px;
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-    
-        .form .max-width .register .btn input {
-            padding: 8px 6%;
-            background-color: var(--pk);
-            color: var(--w);
-            border: 1px solid var(--pk);
-            margin-top: 5%;
-            margin-left: 3em;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+    .form .max-width .login .remind input {
+        margin-top: 3%;
+        margin-left: 8%;
+    }
 
-                /***************************************** 
-        # Footer section
-        ******************************************/
+    .form .max-width .login .remind p {
+        margin: 2% 0 0 2%;
+    }
 
-        .footer {
-            margin-top: 30em;
-            height: 120vh;
-        }
+    .form .max-width .login .remind p {
+        font-family: var(--pop), sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        color: var(--ash1);
+    }
 
-        .footer .max-width {
-            display: block;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem;
-        }
+    .form .max-width .login .forgot {
+        margin: 2% 0 0.2% 10%;
+    }
 
-        .footer .max-width h3 {
-            font-size: 17px;
-            font-family: var(--pop), sans-serif;
-            font-weight: 300;
-            color: var(--ash1);
-            padding: 1rem;
-        }
+    .form .max-width .login .forgot a {
+        font-family: var(--av), sans-serif;
+        font-weight: 300;
+    }
 
-        .footer .max-width .links {
-            display: block;
-        }
+    .form .max-width .login .btn input {
+        padding: 8px 6%;
+        background-color: var(--pk);
+        color: var(--w);
+        border: 1px solid var(--pk);
+        margin-top: 5%;
+        margin-left: 3em;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .form .max-width .login .remind {
+        display: flex;
+    }
+    .form .max-width .login .remind input {
+        margin-top: 3%;
+        margin-left: 4em;
+    }
+    .form .max-width .login .remind p {
+        margin: 2% 0 0 2%;
+        font-family: var(--pop), sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--ash1);
+    }
 
-        .footer .max-width .links h4 {
-            font-size: 16px;
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-            margin-bottom: 1em;
-            color: var(--ash1);
-        }
+    .form .max-width .register {
+        background-color: var(--w);
+        width: 100%;
+        height: 78vh;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3em;
+        margin-left: 10%;
+    }
+    .form .max-width .register h2 {
+        font-size: 25px;
+        font-family: var(--ub), sans-serif;
+        font-weight: 600;
+        color: var(--blk);
+        padding-bottom: 3%;
+        margin-left: 9%;
+        margin-top: 4%;
+    }
 
-        .footer .max-width .links ul li {
-            list-style: none;
-        }
+    .form .max-width .register .max-width {
+        display: block;
+    }
 
-        .footer .max-width .links ul li a {
-            font-size: 17px;
-            color: var(--blk);
-            margin-top: 2rem;
-            font-family: var(--pop), sans-serif;
-            font-weight: 300;
-        }
+    .form .max-width .register .max-width .row {
+        display: block;
+    }
 
-        .footer .max-width .help {
-            display: block;
-        }
+    .form .max-width .register .max-width .row .content {
+        display: block;
+        /* margin-left: 3%; */
+    }
 
-        .footer .max-width .help h4 {
-            font-size: 16px;
-        }
+    .form .max-width .register .max-width .row .content label {
+        font-family: var(--av), sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        margin-bottom: 3%;
+    }
 
-        .footer .max-width .help ul li {
-            list-style: none;
-        }
+    .form .max-width .register .max-width .row .content input {
+        padding: 10px 20px;
+        border-radius: 8px;
+        outline: none;
+        border: 1px solid var(--ash1);
+        width: 100%;
+        margin-bottom: 3%;
+        font-size: 17px;
+        font-family: var(--av), sans-serif;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
 
-        .footer .max-width .help ul li a {
-            font-size: 17px;
-            color: var(--blk);
-            margin-top: 2rem;
-            font-family: var(--pop), sans-serif;
-            font-weight: 300;
-        }
-
-        .footer .max-width .newsletter {
-            display: block;
-        }
-
-        .footer .max-width .newsletter h4 {
-            font-size: 16px;
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-            margin-bottom: 1em;
-            color: var(--ash1);
-        }
-
-        .footer .max-width .newsletter .input {
-            display: flex;
-        }
-
-        .footer .max-width .newsletter .input input {
-            width: 18vw;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid var(--blk);
-            background-color: var(--m);
-        }
-
-        .footer .max-width .newsletter .input input:focus {
-            border-left-color: var(--m);
-            border-right-color: var(--m);
-            border-top-color: var(--m);
-        }
-
-        .footer .max-width .newsletter .input a {
-            margin-left: 1rem;
-            color: var(--ash1);
-            font-size: 17px;
-            font-family: var(--ub), sans-serif;
-        }
-
-        .footer .max-width .newsletter ul li a {
-            font-size: 17px;
-            color: var(--blk);
-            margin-top: 1rem;
-            font-family: var(--pop), sans-serif;
-            font-weight: 300;
-        }
-
-        .footer .max-width .newsletter h4 {
-            font-size: 17px;
-            font-family: var(--av), sans-serif;
-            font-weight: 300;
-            margin-bottom: 1em;
-            color: var(--ash1);
-        }
-
-        .footer .line {
-            content: '';
-            position: absolute;
-            left: 30px;
-            width: 95vw;
-            height: 1px;
-            background-color: var(--ash1);
-        }
-
-        .footer .down {
-            margin: 3%;
-        }
-
-        .footer .down p {
-            color: var(--ash1);
-            font-weight: 300;
-            font-family: var(--pop), sans-serif;
-            font-size: 16px;
-            text-align-last: left;
-        }
+    .form .max-width .register .btn input {
+        padding: 8px 6%;
+        background-color: var(--pk);
+        color: var(--w);
+        border: 1px solid var(--pk);
+        margin-top: 5%;
+        margin-left: 3em;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+            /***************************************** 
+    # Footer section
+    ******************************************/
+    .footer {
+        margin-top: 30em;
+        height: 120vh;
+    }
+    .footer .max-width {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+    .footer .max-width h3 {
+        font-size: 17px;
+        font-family: var(--pop), sans-serif;
+        font-weight: 300;
+        color: var(--ash1);
+        padding: 1rem;
+    }
+    .footer .max-width .links {
+        display: block;
+    }
+    .footer .max-width .links h4 {
+        font-size: 16px;
+        font-family: var(--av), sans-serif;
+        font-weight: 300;
+        margin-bottom: 1em;
+        color: var(--ash1);
+    }
+    .footer .max-width .links ul li {
+        list-style: none;
+    }
+    .footer .max-width .links ul li a {
+        font-size: 17px;
+        color: var(--blk);
+        margin-top: 2rem;
+        font-family: var(--pop), sans-serif;
+        font-weight: 300;
+    }
+    .footer .max-width .help {
+        display: block;
+    }
+    .footer .max-width .help h4 {
+        font-size: 16px;
+    }
+    .footer .max-width .help ul li {
+        list-style: none;
+    }
+    .footer .max-width .help ul li a {
+        font-size: 17px;
+        color: var(--blk);
+        margin-top: 2rem;
+        font-family: var(--pop), sans-serif;
+        font-weight: 300;
+    }
+    .footer .max-width .newsletter {
+        display: block;
+    }
+    .footer .max-width .newsletter h4 {
+        font-size: 16px;
+        font-family: var(--av), sans-serif;
+        font-weight: 300;
+        margin-bottom: 1em;
+        color: var(--ash1);
+    }
+    .footer .max-width .newsletter .input {
+        display: flex;
+    }
+    .footer .max-width .newsletter .input input {
+        width: 18vw;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid var(--blk);
+        background-color: var(--m);
+    }
+    .footer .max-width .newsletter .input input:focus {
+        border-left-color: var(--m);
+        border-right-color: var(--m);
+        border-top-color: var(--m);
+    }
+    .footer .max-width .newsletter .input a {
+        margin-left: 1rem;
+        color: var(--ash1);
+        font-size: 17px;
+        font-family: var(--ub), sans-serif;
+    }
+    .footer .max-width .newsletter ul li a {
+        font-size: 17px;
+        color: var(--blk);
+        margin-top: 1rem;
+        font-family: var(--pop), sans-serif;
+        font-weight: 300;
+    }
+    .footer .max-width .newsletter h4 {
+        font-size: 17px;
+        font-family: var(--av), sans-serif;
+        font-weight: 300;
+        margin-bottom: 1em;
+        color: var(--ash1);
+    }
+    .footer .line {
+        content: '';
+        position: absolute;
+        left: 30px;
+        width: 95vw;
+        height: 1px;
+        background-color: var(--ash1);
+    }
+    .footer .down {
+        margin: 3%;
+    }
+    .footer .down p {
+        color: var(--ash1);
+        font-weight: 300;
+        font-family: var(--pop), sans-serif;
+        font-size: 16px;
+        text-align-last: left;
+    }
+    /* COmmerce */
+    .categ {
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        background-color: var(--ash3);
+    }
+    .categ .max-width {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .categ .max-width .left {
+        display: none;
+    }
+    .categ .max-width .right {
+        width: 100vw;
+    }
+    .categ .max-width .right .carousel {
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        left: 0;
+    }
+    .categ .max-width .right .carousel img {
+        object-fit: cover;
+        height: 50vh;
+        width: 35%;
+    }
+    .categ .max-width .right .carousel .carousel-inner .placedText .txt h2 {
+        font-size: 26px;
+    }
+    .categ .max-width .right .carousel .carousel-inner .placedText .txt p {
+        font-size: 17px;
+    }
+    .categ .max-width .right .carousel .carousel-inner .placedText .txt a {
+        font-size: 16px;
+    }
 }
 
 
 @media only screen and (min-width: 481px) and (max-width: 768px){
-
         nav .max-width .logo img {
             width: 40px;
             height: 40px;
@@ -1345,11 +1258,9 @@ nav .max-width .right .icons svg{
             height: 1px;
             background-color: var(--ash1);
         }
-    
         .footer .down {
             margin: 3%;
         }
-    
         .footer .down p {
             color: var(--ash1);
             font-weight: 300;

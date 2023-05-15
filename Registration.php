@@ -58,6 +58,70 @@
     --g2: #d1f1bc;
 }
 
+/********************************************* 
+# Navigation 
+**********************************************/
+nav {
+    position: sticky;
+    height: 70px;
+    width: 100%;
+    padding: 5px 0;
+    padding-bottom: 30px;
+    background-color: var(--w);
+}
+
+nav .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .left {
+    display: flex;
+    width: 50%;
+}
+
+nav .max-width .right {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .max-width .right ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .right ul li {
+    list-style: none;
+}
+
+nav .max-width .right ul li a {
+    text-decoration: none;
+    margin-left: 60px;
+    color: var(--blk);
+    font-family: var(--pop), sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+nav .max-width .right .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .right .icons svg {
+    margin-left: 30px;
+}
+
 #err {
     z-index: 999;
     position: absolute;

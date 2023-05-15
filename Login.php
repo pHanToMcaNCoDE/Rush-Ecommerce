@@ -1,4 +1,9 @@
 <?php
+
+require("connect.php");
+
+$c = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+
 ini_set("display_errors", "On");
 
     if(isset($_POST['submit'])){
@@ -6,40 +11,32 @@ ini_set("display_errors", "On");
         $uname = $_POST['uname'];
         $pwd = $_POST['pwd'];
         
-        $sql = "SELECT `UserName`, `Email_Address`, `Password` FROM `Forms` WHERE `UserName` = '$uname' AND `Password` = '$pwd'";
+        $sql = "SELECT `UserName`, `Password` FROM `Forms` WHERE `UserName` = '$uname' AND `Password` = '$pwd'";
 
-        if(empty($uname) || empty($email) || empty($pwd)){
-                header("Location: Login.php?signin=empty");
-                exit();
-        }else{
-                if(strlen($pwd) > 8){
-                    header("Location: Login.php?signin=password");
-                    exit();
-                }else{
-                    if($result = $connection->query($sql)){
-                        $count = $result->num_rows;
-                        if($count == 1){
-            
-                            $_SESSION['UNAME'] = $row['UserName'];
-                            $_SESSION['EMAIL'] = $row['Email_Address'];
-                            
-                            header("Location: index.php?signin=success");
-                            exit();
-                        }else{
-                            
-                            header("Location: index.php?signin=null");
-                            exit();
-                        }
-                    }else{
-                        header("Location: Login.php?sigin=error");
-                    }
-                } 
+        $result = $c->query($sql);
+       
+        
+        if(empty($uname) || empty($pwd)){
+            header("Location: login.php?signin=empty");
+        }else{ 
+            if(strlen($pwd) > 8){
+                header("Location: Login.php?signin=pwd");
+            }else if(!($result->num_rows == 1)){
+                header("Location: Login.php?signin=null");
+            }else if(($result->num_rows == 1)){
+                
+                $row = $result->fetch_assoc();
+                
+                $_SESSION['UNAME'] = $row['USERNAME'];
+                
+                header("Location: index.php?signin=success");
+            }else{
+                
+            }
         }
-            
-        
-        
-        
     }
+            
+      
 
 ?>
 <?php
@@ -65,6 +62,70 @@ html {
     max-width: 1330px;
     padding: 0 50px;
     margin: auto;
+}
+
+/********************************************* 
+# Navigation 
+**********************************************/
+nav {
+    position: sticky;
+    height: 70px;
+    width: 100%;
+    padding: 5px 0;
+    padding-bottom: 30px;
+    background-color: var(--w);
+}
+
+nav .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .left {
+    display: flex;
+    width: 50%;
+}
+
+nav .max-width .right {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .max-width .right ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .right ul li {
+    list-style: none;
+}
+
+nav .max-width .right ul li a {
+    text-decoration: none;
+    margin-left: 60px;
+    color: var(--blk);
+    font-family: var(--pop), sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+nav .max-width .right .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .max-width .right .icons svg {
+    margin-left: 30px;
 }
 
 #errlog {
@@ -248,15 +309,15 @@ html {
                     <div class="row">
                         <div class="content">
                             <label for="Username">Username: <span style="color: var(--cr);">*</span></label>
-                            <input type="text" name="uname">
+                            <input type="text" name="uname" placeholder="e.g; @jDoe">
                         </div>
-                        <div class="content">
+                        <div class=" content">
                             <label for="Password">Password: <span style="color: var(--cr);">*</span></label>
-                            <input type="password" name="pwd">
+                            <input type="password" name="pwd" placeholder="e.g; JDoe123">
                         </div>
                     </div>
                 </div>
-                <div class="remind">
+                <div class=" remind">
                     <input type="checkbox">
                     <p>Remember me</p>
                 </div>
@@ -287,7 +348,7 @@ html {
                                 echo "<p id='errlog'><i style='margin-right: 2%;'       class='fa-solid fa-circle-exclamation'></i>All fields are required!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
                                 exit();
                             }
-                            else if($signin == "password"){
+                            else if($signin == "pwd"){
                                 
                                 echo "<p id='errlog'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Password must not exceed 8 characters!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
                                 exit();
