@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+
+:root {
+
+    /* Fonts */
+
+    --pop: 'Poppins';
+    --ub: 'Ubuntu';
+    --av: 'Avenir';
+    --rob: 'Roboto';
+
+    /* Colors */
+
+    --ash1: #888787;
+    --ash2: #f1f1f1e5;
+    --pk: #FF75A0;
+    --w: #ffffff;
+    --blk: #000000;
+    --m: #e9e5e0;
+    --ash3: #f9fafc;
+    --cr: crimson;
+    --cr2: rgb(247, 128, 152);
+    --g2: #d1f1bc;
+    --g2: #d1f1bc;
+    --g: #66B830;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+}
+
+/* Registration Page Styling */
+
+.regForm{
+    height: 100vh;
+}
+
+
+.regForm .max-width{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+

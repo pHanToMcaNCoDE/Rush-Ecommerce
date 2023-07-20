@@ -1,181 +1,9 @@
 <?php
 
-    require("connect.php");
-
-    // ini_set("display_errors", "On");
-
-    $connection = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
-
-
-    if(isset($_POST['submit'])){
-        
-        $uname = $_POST['uname'];
-        $email = $_POST['email'];
-        $pwd = $_POST['pwd'];
-
-
-        $sql = "INSERT INTO `Forms`(`UserName`, `Email_Address`, `Password`) VALUES ('".$uname."','".$email."','".$pwd."');";
-        
-            
-    
-            if(empty($uname) || empty($email) || empty($pwd)){
-                header("Location: Registration.php?signup=empty");
-                // exit();
-            }else{
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                    header("Location: Registration.php?signup=email");
-                    exit();
-                }else if(strlen($pwd) > 8){
-                    header("Location: Registration.php?signup=pwd");
-                    exit();
-                }else{
-                    if($connection->query($sql)){
-                        header("Location: Login.php?signup=success");
-                        // exit();
-                    }else{
-                        header("Location: Registration.php?signup=error");
-                        exit();
-                    }
-                } 
-            }
-                    
-    }
-
+require("navbar.php");
+require("data.php");
 
 ?>
-<?php
-
-
-    require("navbar.php");
-    require("data.php");
-
-?>
-
-<style>
-:root {
-
-    --cr2: rgb(247, 128, 152);
-    --g2: #d1f1bc;
-}
-
-/********************************************* 
-# Navigation 
-**********************************************/
-nav {
-    position: sticky;
-    height: 70px;
-    width: 100%;
-    padding: 5px 0;
-    padding-bottom: 30px;
-    background-color: var(--w);
-}
-
-nav .max-width {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .max-width .left {
-    display: flex;
-    width: 50%;
-}
-
-nav .max-width .right {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .max-width .logo {
-    display: flex;
-    align-items: center;
-}
-
-nav .max-width .right ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .max-width .right ul li {
-    list-style: none;
-}
-
-nav .max-width .right ul li a {
-    text-decoration: none;
-    margin-left: 60px;
-    color: var(--blk);
-    font-family: var(--pop), sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-}
-
-nav .max-width .right .icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .max-width .right .icons svg {
-    margin-left: 30px;
-}
-
-#err {
-    z-index: 999;
-    position: absolute;
-    top: 35%;
-    right: 50%;
-    transform: translate(50%, 1%);
-    width: 25%;
-    padding: 20px;
-    align-items: center;
-    background-color: var(--cr2);
-    border: 1px solid var(--cr);
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: var(--av), sans-serif;
-    color: var(--cr);
-}
-
-#err .fa-xmark {
-    cursor: pointer;
-}
-
-#err.active {
-    display: none;
-}
-
-
-#suc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    position: absolute;
-    top: 34%;
-    right: 18%;
-    width: 25%;
-    padding: 20px;
-    background-color: var(--g2);
-    border: 1px solid var(--g);
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: var(--av), sans-serif;
-    color: var(--g);
-}
-
-#suc .fa-xmark {
-    cursor: pointer;
-}
-
-#suc.active {
-    display: none;
-}
-</style>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -189,100 +17,46 @@ nav .max-width .right .icons svg {
 </head>
 
 <body>
-    <section id="reg" class="reg">
-        <img src="assets/regImg.jpg" style="top: 10px; z-index: -1; width: 100%; height: 190px; object-fit: cover;">
-        <div class=" max-width">
-            <div class="content">
+    <section id="regForm" class="regForm">
+        <!-- <img src="assets/regImg.jpg" alt="Product Image" /> -->
+        <div class="max-width">
+            <div class="up">
                 <div class="img">
-                    <img src="assets/logo.png" alt="Rush Logo" srcset="">
+                    <img src="assets/logo.png" alt="Rush Logo">
                 </div>
                 <div class="txt">
                     <h2>My Account</h2>
-                    <p><a href="#">Home</a> > registration</p>
+                    <p><a href="#">Home</a>>registration</p>
                 </div>
+            </div>
+
+            <div class="down">
+                <form class="register" action="" method="post">
+                    <h2>Register</h2>
+                    <div class="max-width">
+                        <div class="row">
+                            <div class="content"><label for="Username">Username: <span
+                                        style="color: var(--cr);">*</span></label><input type=" text" name="uname"
+                                    placeholder="e.g; Jdoe12"></div>
+                            <div class="content"><label for="Email Address">Email address: <span
+                                        style="color: var(--cr);">*</span></label><input type="text" name="email"
+                                    placeholder="e.g; jDoe@gmail.com"></div>
+                        </div>
+                        <div class="row">
+                            <div class="content"><label for="Password">Password: <span
+                                        style="color: var(--cr);">*</span></label><input type="password" name="pwd"
+                                    placeholder="jD123"></div>
+                        </div>
+                    </div>
+                    <div class="btn"><input type="submit" name="submit" value="Register" class="submitReg"></div>
+                </form>
             </div>
         </div>
     </section>
 
-    <section id="form" class="form">
-        <div class="max-width">
-
-            <form class="register" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"
-                style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);">
-                <h2>Register</h2>
-                <div class="max-width">
-                    <div class="row">
-                        <div class="content">
-
-                            <label for="Username">Username: <span style="color: var(--cr);">*</span></label>
-                            <input type=" text" name="uname" placeholder="e.g; Jdoe12">
-                        </div>
-                        <div class="content">
-                            <label for="Email Address">Email address: <span style="color: var(--cr);">*</span></label>
-                            <input type="text" name="email" placeholder="e.g; jDoe@gmail.com">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="content">
-                            <label for="Password">Password: <span style="color: var(--cr);">*</span></label>
-                            <input type="password" name="pwd" placeholder="jD123">
-                        </div>
-                    </div>
-                </div>
-                <div class="btn">
-                    <input type="submit" name="submit" value="Register" class="submitReg">
-                </div>
-            </form>
-
-        </div>
-    </section>
-
     <?php
-        
     require("footer.php");
-    include("script.php");
-
-    
     ?>
-    <?php
-   
-                // Registration
-   
-                        if(!isset($_GET['signup'])){
-                            exit();
-                        }else{
-                            $check = $_GET['signup'];
-
-                            if($check == "empty"){
-                                
-                                echo "<p id='err'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>All fields are required!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-                                exit();
-                                
-                            }
-                            else if($check == "email"){
-                                
-                                echo "<p id='err'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Invalid E-mail Address<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-                                exit();
-                                
-                            }
-                            else if($check == "pwd"){
-                                
-                                echo "<p id='err'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Password ust not exceed 8 characters!m<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-                                exit();
-                                
-                            }
-                            else if($check == "success"){
-                                
-                                echo "<p id='suc' syle='position: relative;'><i style='margin-right: 2%;' class='fa-solid fa-circle-check'></i>You've registered successfully!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-                                exit();
-                                
-                            }else if($check == "error"){
-                                echo "<p id='err'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Error! try again!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-                                exit();
-                            }
-                        }
-
-?>
     <script>
     var success = document.getElementById('suc');
     var error = document.getElementById('err');
@@ -290,12 +64,16 @@ nav .max-width .right .icons svg {
 
 
     del.addEventListener('click', () => {
-        success.classList.add('active');
-    });
+            success.classList.add('active');
+        }
+
+    );
 
     del.addEventListener('click', () => {
-        error.classList.add('active');
-    });
+            error.classList.add('active');
+        }
+
+    );
     </script>
 </body>
 
