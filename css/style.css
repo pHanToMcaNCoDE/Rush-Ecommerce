@@ -193,7 +193,7 @@ nav .max-width .right ul li .currentPage{
     outline: none;
     font-size: .8rem;
     border-radius: 6px;
-    border: 1px solid var(--ash2);
+    border: 1px solid var(--ash1);
     font-family: var(--av), sans-serif;
     font-weight: 400;
 }
@@ -234,6 +234,111 @@ nav .max-width .right ul li .currentPage{
     padding: 1.3em;
 }
 
+.footer .max-width .maxLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+.footer .max-width .maxLeft img{
+    width: 30%;
+    height: 30%;
+}
+.maxLeft .dir{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .max-width .maxLeft .dir .links li {
+    list-style: none;
+    margin: .6em 1em;
+}
+
+#help{
+    font-size: 1.2rem;
+    font-family: var(--ub), sans-serif;
+    font-weight: 400;
+}
+#link{
+    font-size: 1.2rem;
+    font-family: var(--ub), sans-serif;
+    font-weight: 400;
+}
+
+.footer .max-width .maxLeft .dir .links li a {
+    font-size: 1rem;
+    color: var(--ash1);
+    text-decoration: none;
+    font-family: var(--pop), sans-serif;
+    font-weight: 400;
+    margin-top: 1em;
+}
+.maxLeft .dir {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer .max-width .maxLeft .dir .help li {
+    list-style: none;
+    margin: .6em 1em;
+}
+
+.footer .max-width .maxLeft .dir .help li a {
+    font-size: 1rem;
+    color: var(--ash1);
+    text-decoration: none;
+    font-family: var(--pop), sans-serif;
+    font-weight: 400;
+    margin-top: 1em;
+}
+
+
+.footer .max-width .left .dir .help li {
+    list-style: none;
+}
+
+.footer .max-width .left .dir .help li a {
+    font-size: 1.1rem;
+    color: var(--w);
+    text-decoration: none;
+    font-family: var(--rob), sans-serif;
+    font-weight: 400;
+    margin-top: 1em;
+    
+}
+
+.footer .max-width .maxLeft .follow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .max-width .maxLeft .follow li{
+    list-style: none;
+}
+
+.footer .max-width .maxLeft .follow li a{
+    margin-right: 1em;
+    color: var(--ash1);
+    font-size: 1.6rem;
+}
+
+
+.footer .max-width .maxRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.footer .max-width .maxRight .check{
+    display: flex;
+    align-items: center;
+}
+/* 
 .footer .max-width h3{
     font-size: 1.5rem;
     font-family: var(--ub), sans-serif;
@@ -245,35 +350,4 @@ nav .max-width .right ul li .currentPage{
     font-family: var(--av), sans-serif;
     font-weight: 500;
 }
-
-.footer .max-width .links ul li{
-    list-style: none;
-}
-
-.footer .max-width .links ul li a{
-    font-size: 1.1rem;
-    color: var(--w);
-    text-decoration: none;
-    font-family: var(--av), sans-serif;
-    font-weight: 500;
-    margin-top: 1em;
-}
-
-.footer .max-width .help h4 {
-    font-size: 1.4rem;
-    font-family: var(--av), sans-serif;
-    font-weight: 500;
-}
-
-.footer .max-width .help ul li {
-    list-style: none;
-}
-
-.footer .max-width .help ul li a {
-    font-size: 1.1rem;
-    color: var(--w);
-    text-decoration: none;
-    font-family: var(--av), sans-serif;
-    font-weight: 500;
-    margin-top: 1em;
-}
+ */
