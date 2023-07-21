@@ -183,7 +183,7 @@ nav .max-width .right ul li .currentPage{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: .5em;
+    margin: .7em;
     width: 100%;
 }
 
@@ -231,4 +231,49 @@ nav .max-width .right ul li .currentPage{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.3em;
+}
+
+.footer .max-width h3{
+    font-size: 1.5rem;
+    font-family: var(--ub), sans-serif;
+    font-weight: 500;
+}
+
+.footer .max-width .links h4{
+    font-size: 1.4rem;
+    font-family: var(--av), sans-serif;
+    font-weight: 500;
+}
+
+.footer .max-width .links ul li{
+    list-style: none;
+}
+
+.footer .max-width .links ul li a{
+    font-size: 1.1rem;
+    color: var(--w);
+    text-decoration: none;
+    font-family: var(--av), sans-serif;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.footer .max-width .help h4 {
+    font-size: 1.4rem;
+    font-family: var(--av), sans-serif;
+    font-weight: 500;
+}
+
+.footer .max-width .help ul li {
+    list-style: none;
+}
+
+.footer .max-width .help ul li a {
+    font-size: 1.1rem;
+    color: var(--w);
+    text-decoration: none;
+    font-family: var(--av), sans-serif;
+    font-weight: 500;
+    margin-top: 1em;
 }
