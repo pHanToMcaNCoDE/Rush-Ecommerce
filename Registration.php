@@ -35,17 +35,15 @@ require("data.php");
                     <h2>Register</h2>
                     <div class="row">
                         <div class="content">
-                            <label for="Username">Username: <span style="color: var(--cr);">*</span></label>
+                            <label for="Username">Username:</label>
                             <input type=" text" name="uname" placeholder="e.g; Jdoe12">
                         </div>
                         <div class="content">
-                            <label for="Email Address">Email address: <span style="color: var(--cr);">*</span></label>
+                            <label for="Email Address">Email address:</label>
                             <input type="text" name="email" placeholder="e.g; jDoe@gmail.com">
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="content">
-                            <label for="Password">Password: <span style="color: var(--cr);">*</span></label>
+                            <label for="Password">Password:</label>
                             <input type="password" name="pwd" placeholder="jD123">
                         </div>
                     </div>
