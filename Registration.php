@@ -12,13 +12,13 @@ require("data.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Rush -- inspired by dreams || Forms</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/032421aa45.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <section id="regForm" class="regForm">
-        <!-- <img src="assets/regImg.jpg" alt="Product Image" /> -->
+        <img src="assets/regImg.jpg" alt="Product Image" />
         <div class="max-width">
             <div class="up">
                 <div class="img">
@@ -26,29 +26,32 @@ require("data.php");
                 </div>
                 <div class="txt">
                     <h2>My Account</h2>
-                    <p><a href="#">Home</a>>registration</p>
+                    <p><a href="#">Home</a> > Registration</p>
                 </div>
             </div>
 
             <div class="down">
                 <form class="register" action="" method="post">
                     <h2>Register</h2>
-                    <div class="max-width">
-                        <div class="row">
-                            <div class="content"><label for="Username">Username: <span
-                                        style="color: var(--cr);">*</span></label><input type=" text" name="uname"
-                                    placeholder="e.g; Jdoe12"></div>
-                            <div class="content"><label for="Email Address">Email address: <span
-                                        style="color: var(--cr);">*</span></label><input type="text" name="email"
-                                    placeholder="e.g; jDoe@gmail.com"></div>
+                    <div class="row">
+                        <div class="content">
+                            <label for="Username">Username: <span style="color: var(--cr);">*</span></label>
+                            <input type=" text" name="uname" placeholder="e.g; Jdoe12">
                         </div>
-                        <div class="row">
-                            <div class="content"><label for="Password">Password: <span
-                                        style="color: var(--cr);">*</span></label><input type="password" name="pwd"
-                                    placeholder="jD123"></div>
+                        <div class="content">
+                            <label for="Email Address">Email address: <span style="color: var(--cr);">*</span></label>
+                            <input type="text" name="email" placeholder="e.g; jDoe@gmail.com">
                         </div>
                     </div>
-                    <div class="btn"><input type="submit" name="submit" value="Register" class="submitReg"></div>
+                    <div class="row">
+                        <div class="content">
+                            <label for="Password">Password: <span style="color: var(--cr);">*</span></label>
+                            <input type="password" name="pwd" placeholder="jD123">
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" name="submit" value="Register" class="submitReg">
+                    </div>
                 </form>
             </div>
         </div>
