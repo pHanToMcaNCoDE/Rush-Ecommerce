@@ -18,57 +18,40 @@
 <body>
     <section class="footer" id="footer">
         <div class="max-width">
-            <h3>Niger street P.O 12333461, </br>Fegge, Kano Nigeria</h3>
-            <div class="links">
-                <h4>Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="links">
-                <h4>Lorem</h4>
-                <ul>
-                    <li><a href="#">lorem ipsum</a></li>
-                    <li><a href="#">lorem ipppsum</a></li>
-                    <li><a href="#">loremm ispum</a></li>
-                    <li><a href="#">ipsum lorem</a></li>
-                </ul>
-            </div>
-            <div class="links">
-                <h4>Ipsum</h4>
-                <ul>
-                    <li><a href="#">ipsum Lorem</a></li>
-                    <li><a href="#">ipsum Lorem</a></li>
-                    <li><a href="#">ipsum Lorem</a></li>
-                    <li><a href="#">ipsum Lorem</a></li>
-                    <li><a href="#">ipsum Lorem</a></li>
-                </ul>
-            </div>
-            <div class="help">
-                <h4>Help</h4>
-                <ul>
-                    <li><a href="#">Payment option</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">Privacy policies</a></li>
-                </ul>
-            </div>
-
-            <div class="newsletter">
-                <h4>Newsletter</h4>
-                <div class="input">
-                    <input type=" submit" value="">
-                    <a href="#">SUBSCRIBE</a>
+            <div class="maxLeft">
+                <img src="assets/logo.png" alt="Rush Logo">
+                <div class="dir">
+                    <ul class="help">
+                        <li id="help">Help</li>
+                        <li><a href="#">Payment option</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy policies</a></li>
+                    </ul>
+                    <ul class="links">
+                        <li id="link">Links</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </div>
-                <ul class="socials">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="follow">
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
+            </div>
+            <div class="maxRight">
+                <p></p>
+                <div class="subscribe">
+                    <input type="email" name="email" placeholder="Your email here">
+                    <input type="submit" name="subscribe" value="Subscribe">
+                    <div class="check">
+                        <input type="checkbox" name="subsc">
+                        <p>By clicking the box, you agree that you are at least 16 years of age</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="line"></div>
