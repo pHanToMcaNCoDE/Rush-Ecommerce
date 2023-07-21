@@ -28,6 +28,13 @@
                         <li><a href="#">Privacy policies</a></li>
                     </ul>
                     <ul class="links">
+                        <li id="link">Locations</li>
+                        <li><a href="#">FCT, Abuja, Nigeria</a></li>
+                        <li><a href="#">Lyon, France</a></li>
+                        <li><a href="#">Madrid, Spain</a></li>
+                        <li><a href="#">Cape town, South Africa</a></li>
+                    </ul>
+                    <ul class="links">
                         <li id="link">Links</li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Shop</a></li>
@@ -49,13 +56,17 @@
                     <input type="submit" name="subscribe" value="Subscribe">
                     <div class="check">
                         <input type="checkbox" name="subsc">
-                        <p>By clicking the box, you agree that you are at least 16 years of age</p>
+                        <p>By clicking the box, you agree that you<br> are at least 16 years of age</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="line"></div>
         <div class=" down">
+            <p><a href="#">Website Terms</a> | <a href="#">Privacy Policy</a> | <a href="#">Accessibility Statement</a>
+                | <a>CA Transparency in
+                    Lorem Ipsum</a> | <a href="#">Supplier Lorem ipsum</a> | </p>
+            <p>Marketing to people | They're all dummy text</p>
             <p>&copy;<?php echo date("Y") ?> all rights reserved</p>
         </div>
     </section>
