@@ -101,7 +101,7 @@ nav .max-width .right ul li .currentPage{
 /* Registration Page Styling */
 .regForm {
     background-color: var(--ash4);
-    height: 110vh;
+    height: 105vh;
     width: 100%;
 }
 
@@ -158,7 +158,7 @@ nav .max-width .right ul li .currentPage{
 
 .regForm .max-width .down .register {
     background-color: var(--w);
-    margin: 2.5em 0;
+    margin: 3em 0 2.5em 0;
     width: 35vw;
     max-width: 400px;
     height: 20%;
@@ -220,6 +220,7 @@ nav .max-width .right ul li .currentPage{
     padding: .8em 1.5em;
     border-radius: 6px;
     width: 100px;
+    cursor: pointer;
 }
 
 
@@ -284,7 +285,7 @@ nav .max-width .right ul li .currentPage{
 
 .logForm .max-width .down .login {
     background-color: var(--w);
-    margin: 2.5em 0;
+    margin: 3em 0 2.5em 0;
     width: 35vw;
     max-width: 400px;
     height: 20%;
@@ -303,7 +304,7 @@ nav .max-width .right ul li .currentPage{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: .7em;
+    margin: 0;
 }
 
 .logForm .max-width .down .login .row .content {
@@ -335,12 +336,19 @@ nav .max-width .right ul li .currentPage{
 
 .logForm .max-width .down .login .remind{
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
+    margin-bottom: .5em;
+}
+
+.logForm .max-width .down .login .remind p{
+    margin-left: .4em;
+    font-size: .9rem;
+    font-weight: 300;
+    font-family: var(--av), sans-serif;
 }
 
 .logForm .max-width .btn {
-    margin: 0 0 0 1.5em;
+    margin: 0 2em 0 0;
 }
 
 .logForm .max-width .btn input {
@@ -352,6 +360,7 @@ nav .max-width .right ul li .currentPage{
     padding: .8em 1.5em;
     border-radius: 6px;
     width: 100px;
+    cursor: pointer;
 }
 
 

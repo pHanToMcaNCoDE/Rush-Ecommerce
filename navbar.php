@@ -25,10 +25,10 @@
             </div>
             <div class="right">
                 <ul>
-                    <li><a class="currentPage" href="#">My Account</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a class="currentPage" href="index.php">My Account</a></li>
+                    <li><a href="index.php">Shop</a></li>
+                    <li><a href="index.php">About</a></li>
+                    <li><a href="index.php">Contact</a></li>
                     <li>
                         <a>
                             <svg width="19" height="19" viewBox="0 0 15 15" fill="none"

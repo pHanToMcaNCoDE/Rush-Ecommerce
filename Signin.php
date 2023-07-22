@@ -34,21 +34,19 @@ require("navbar.php");
             <div class="down">
                 <form class="login" action="" method="post">
                     <h2>Signin</h2>
-                    <div class="max-width">
-                        <div class="row">
-                            <div class="content">
-                                <label for="Username">Username:</label>
-                                <input type="text" name="uname" placeholder="e.g; @jDoe">
-                            </div>
-                            <div class=" content">
-                                <label for="Password">Password:</label>
-                                <input type="password" name="pwd" placeholder="e.g; JDoe123">
-                            </div>
+                    <div class="row">
+                        <div class="content">
+                            <label for="Username">Username:</label>
+                            <input type="text" name="uname" placeholder="e.g; @jDoe">
                         </div>
-                        <div class="remind">
-                            <input type="checkbox">
-                            <p>Remember me</p>
+                        <div class=" content">
+                            <label for="Password">Password:</label>
+                            <input type="password" name="pwd" placeholder="e.g; JDoe123">
                         </div>
+                    </div>
+                    <div class="remind">
+                        <input type="checkbox">
+                        <p>Remember me</p>
                     </div>
                     <div class="btn">
                         <input type="submit" value="Login" name="submit">
