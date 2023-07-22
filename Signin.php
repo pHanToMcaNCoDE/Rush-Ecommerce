@@ -26,7 +26,9 @@ require("navbar.php");
                 </div>
                 <div class="txt">
                     <h2>My Account</h2>
-                    <p><a href="signin.php">My Account</a> > Sign in</p>
+                    <p><a href="signin.php">My Account</a>
+                        < <a href="index.php" style="text-decoration: underline; color: var(--blk);">Signup</a>
+                    </p>
                 </div>
             </div>
 

@@ -26,7 +26,9 @@ require("data.php");
                 </div>
                 <div class="txt">
                     <h2>My Account</h2>
-                    <p><a href="index.php">My Account</a> > Signup</p>
+                    <p><a href="index.php">My Account</a> > <a href="signin.php"
+                            style="text-decoration: underline; color: var(--blk);">Signin</a>
+                    </p>
                 </div>
             </div>
 
@@ -44,7 +46,7 @@ require("data.php");
                         </div>
                         <div class="content">
                             <label for="Password">Password:</label>
-                            <input type="password" name="pwd" placeholder="jD123">
+                            <input type="password" name="pwd" placeholder="Create a password">
                         </div>
                     </div>
                     <div class="btn">
