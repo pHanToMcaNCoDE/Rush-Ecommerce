@@ -25,7 +25,7 @@
             </div>
             <div class="right">
                 <ul>
-                    <li><a class="currentPage" href="#">Home</a></li>
+                    <li><a class="currentPage" href="#">My Account</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
