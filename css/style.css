@@ -960,13 +960,13 @@ nav .max-width .right ul li .currentPage{
 }
 
 .categ .max-width .right .carousel{
-    width: 100%;
+    width: 70vw;
 }
 .categ .max-width .right .carousel .carousel-inner .carousel-item{
     position: relative;
 }
 .categ .max-width .right .carousel .carousel-inner .carousel-item img {
-    width: 100vw;
+    width: 100%;
     height: 55vh;
     object-fit: cover;
 }
@@ -1087,7 +1087,7 @@ nav .max-width .right ul li .currentPage{
 /* Responsive Design */
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
-    
+
     /* Error messages */
 
     #err {
@@ -1692,7 +1692,7 @@ nav .max-width .right ul li .currentPage{
     }
 
     .categ .max-width .right .carousel {
-        width: 100%;
+        width: 100vw;
     }
 
     .categ .max-width .right .carousel .carousel-inner .carousel-item {
@@ -1724,6 +1724,13 @@ nav .max-width .right ul li .currentPage{
         font-size: 1.2em;
     }
 
+
+    .categ .max-width .right .carousel .carousel-inner .carousel-item .textTwo {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        padding-left: .6rem;
+    }
     .categ .max-width .right .carousel .carousel-inner .carousel-item .textTwo h2 {
         font-size: 2em;
     }
@@ -1734,6 +1741,12 @@ nav .max-width .right ul li .currentPage{
 
     .categ .max-width .right .carousel .carousel-inner .carousel-item .textTwo a {
         font-size: 1.2em;
+    }
+    .categ .max-width .right .carousel .carousel-inner .carousel-item .textThree {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        padding-left: .6rem;
     }
 
     .categ .max-width .right .carousel .carousel-inner .carousel-item .textThree h2 {

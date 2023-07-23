@@ -74,105 +74,68 @@ ini_set("display_errors", "on");
                 </ul>
             </div>
             <div class="right">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button
+                            style="border-radius: 50%; background-color: var(--cr); border: 1px solid var(--w); width: 7px; height: 7px;"
+                            type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button
+                            style="border-radius: 50%; background-color: var(--cr); border: 1px solid var(--w); width: 7px; height: 7px;"
+                            type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button
+                            style="border-radius: 50%; background-color: var(--cr); border: 1px solid var(--w); width: 7px; height: 7px;"
+                            type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="assets/ads/adv1.jpg" alt="First slide">
+                            <img src="assets/ads/adv1.jpg" class="d-block" alt="Advert1">
                             <div class="textOne">
                                 <h2>Get yours at $1.99</h2>
                                 <p>You can get your favourite snacks at <br>affordable prices</p>
-                                <a href="#">
-                                    Order now
-                                    <i class="fa-solid fa-arrow-right-long"></i>
-                                </a>
+                                <a href="#">Order now <i style="margin-left: 5px;"
+                                        class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/ads/adv2.jpg" alt="Second slide">
-                            <div class="textTwo">
+                            <img src="assets/ads/adv2.jpg" class="d-block" alt="Advert2">
+                            <div class="textTwo" style="position: absolute;
+        top: 25%;
+        left: 5%;
+        padding-left: .6rem;">
                                 <h2>Get high quality <br>Cosmetics!</h2>
-                                <a href="#">
-                                    Order now
-                                    <i style="margin-left: 5px;" class="fa-solid fa-arrow-right-long"></i>
-                                </a>
+                                <a href="#">Order now <i style="margin-left: 5px;"
+                                        class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="assets/ads/adv3.jpg" alt="Third slide">
-                            <div class="textThree">
+                            <img src="assets/ads/adv3.jpg" class="d-block" alt="Advert3">
+                            <div class="textThree" style="position: absolute;
+        top: 25%;
+        left: 5%;
+        padding-left: .6rem;">
                                 <h2>At affordable prices!</h2>
                                 <p>Rush down and grab your kids favourite <br>heros at lesser prices.
                                 </p>
-                                <a href="#">
-                                    Order now
-                                    <i style="margin-left: 5px;" class="fa-solid fa-arrow-right-long"></i>
-                                </a>
+                                <a href="#">Order now <i style="margin-left: 5px;"
+                                        class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span style="color: var(--w);" class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true" style="color: var(--w);"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span style="border: 1px solid var(--w); background-color: var(--cr);"class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span style="border: 1px solid var(--w); background-color: var(--cr);"
+                            class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/ads/adv1.jpg" class="d-block" alt="Advert1">
-                        <div class="textOne">
-                            <h2>Get yours at $1.99</h2>
-                            <p>You can get your favourite snacks at <br>affordable prices</p>
-                            <a href="#">Order now <i style="margin-left: 5px;"
-                                    class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/ads/adv2.jpg" class="d-block" alt="Advert2">
-                        <div class="textTwo">
-                            <h2>Get high quality <br>Cosmetics!</h2>
-                            <a href="#">Order now <i style="margin-left: 5px;"
-                                    class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/ads/adv3.jpg" class="d-block" alt="Advert3">
-                        <div class="textThree">
-                            <h2>At affordable prices!</h2>
-                            <p>Rush down and grab your kids favourite <br>heros at lesser prices.
-                            </p>
-                            <a href="#">Order now <i style="margin-left: 5px;"
-                                    class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div> -->
             </div>
         </div>
     </section>
