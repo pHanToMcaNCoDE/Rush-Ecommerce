@@ -1,7 +1,51 @@
 <?php
 
-require("navbar.php");
 
+require "connection.php";
+
+if($_POST['signin']){
+    $uname = $_POST['uname'];
+    $pwd = $_POST['pwd'];
+
+    $connect = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+
+    if(!$connect){
+        die ("Cannot connect to the database ".$connect->connect_error);
+    }else{
+        $query = "SELECT `UserName`, `Password` FROM `Signup` WHERE `UserName` = '$uname' AND `Password` = '$pwd'";
+        
+        $run = $connect->query($query);
+
+        if (empty($uname) && empty($pwd)) {
+            header("Location: Signin.php?signin=all");
+            exit();
+        } else if (empty($uname) && isset($pwd)) {
+            header("Location: Signin.php?signin=uname");
+            exit();
+        } else if (isset($uname) && empty($pwd)) {
+            header("Location: Signin.php?signin=pwd");
+            exit();
+        } else if (strlen($uname) > 6) {
+            header("Location: Signin.php?uname=len");
+            exit();
+        } else if (strlen($pwd) > 8) {
+            header("Location: Signin.php?pwd=len");
+            exit();
+        } else if ($run->num_rows == 1) {
+            header("Location: commerce.php?sigin=success");
+        } else if (!($run->num_rows >= 1)) {
+            header("Location: Signin.php?signin=null");
+        }else{
+            
+        }
+    }
+    
+}
+
+?>
+<?php
+    require("navbar.php"); 
+    // echo (ini_set('display_error', "On"));
 ?>
 
 <!DOCTYPE html>
@@ -34,39 +78,25 @@ require("navbar.php");
 
 
             <div class="down">
-                <?php
-                    if (isset($_GET['signup']) && $_GET['signup'] === "success") {
-                        echo "<div id='suc'>
-                            <div class='left'>
-                                <h2>👍🏼</h2>
-                            </div>
-                            <div class='right'>
-                                <h2>Signup was successful!</h2>
-                                <p>Please sign into your account</p>
-                            </div>
-                        </div>";
-                    }
-                ?>
-                <form class="login" action="" method="post">
+                <form class="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <h2>Signin</h2>
                     <div class="row">
                         <div class="content">
                             <label for="Username">Username:</label>
-                            <input type="text" name="uname" placeholder="e.g; @jDoe">
+                            <input type="text" name="uname" placeholder="Your username here">
                         </div>
                         <div class=" content">
                             <label for="Password">Password:</label>
-                            <input type="password" name="pwd" placeholder="e.g; JDoe123">
+                            <input type="password" name="pwd" placeholder="Your password here">
                         </div>
-                    </div>
-                    <div class="remind">
-                        <input type="checkbox">
-                        <p>Remember me</p>
-                    </div>
-                    <div class="btn">
-                        <input type="submit" value="Login" name="submit">
-                    </div>
-                    <a href="#"></a>
+                        <div class="remind">
+                            <input type="checkbox" name="remember">
+                            <p>Remember me</p>
+                        </div>
+                        <div class="btn">
+                            <input type="submit" value="Signin" name="signin">
+                        </div>
+                        <a href="#"></a>
                 </form>
             </div>
         </div>
@@ -81,39 +111,89 @@ require("navbar.php");
     ?>
     <?php
 
-    if (!isset($_GET['signin'])) {
-        exit();
-    } else {
+    if (isset($_GET['signup']) && $_GET['signup'] === "success") {
+        echo "<div id='suc'>
+                <div class='left'>
+                    <h2>👍🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Signup was successful!</h2>
+                    <p>Please sign into your account</p>
+                </div>
+            </div>";
+    }else{
+        if (isset($_GET['signin']) && $_GET['signin'] == "all") {
 
-        $signin = $_GET['signin'];
-
-        if ($signin == "empty") {
-
-            echo "<p id='errlog'><i style='margin-right: 2%;'       class='fa-solid fa-circle-exclamation'></i>All fields are required!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-            exit();
-        } else if ($signin == "pwd") {
-
-            echo "<p id='errlog'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Password must not exceed 8 characters!<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-            exit();
-        } else if ($signin == "null") {
-
-            echo "<p id='errlog'><i style='margin-right: 2%;' class='fa-solid fa-circle-exclamation'></i>Invalid Username or Password<i style='position: absolute; right: 2%;' class='fa-solid fa-xmark'></i></p>";
-            exit();
-        } else if ($signin == "error") {
-            echo "<div class='errData'>
-                                        <div class='errIcon'>
-                                            <i class='fa-sharp fa-solid fa-circle-check'></i>
-                                        </div>
-                                        <div class='errText'>
-                                            <p>Invalid Usernam or Password!</p>
-                                        </div>
-                                    </div>";
-            exit();
-        }
+                echo "<div id='err'>
+                    <div class='left'>
+                        <h2>👎🏼</h2>
+                    </div>
+                    <div class='right'>
+                        <h2>All fields are required!</h2>
+                        <p>Please try again</p>
+                    </div>
+                </div>";
+                exit();
+            } else if (isset($_GET['signin']) && $_GET['signin'] == "uname") {
+                echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Username required!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+                exit();
+            } else if (isset($_GET['signin']) && $_GET['signin'] == "pwd") {
+                echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Password required!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+                exit();
+            } else if (isset($_GET['uname']) && $_GET['uname'] == "len") {
+                echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Username should not be more than 6 characters! </h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+                exit();
+            } else if (isset($_GET['pwd']) && $_GET['pwd'] == "len") {
+                echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Password should not be more than 8 characters!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+                exit();
+            } else if (isset($_GET['signin']) && $_GET['signin'] == "null") {
+                echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Not Signed up or Invalid Username and Password!</h2>
+                            <p>Please try again or Signup first</p>
+                        </div>
+                    </div>";
+                exit();
+            }
     }
     ?>
 
-    <script>
+    <!-- <script>
     var success = document.getElementById('suc');
     var error = document.getElementById('err');
     var del = document.querySelectorAll('.fa-xmark');
@@ -126,7 +206,7 @@ require("navbar.php");
     del.addEventListener('click', () => {
         error.classList.add('active');
     });
-    </script>
+    </script> -->
 
 </body>
 
