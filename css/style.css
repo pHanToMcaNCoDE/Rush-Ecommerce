@@ -217,145 +217,6 @@ html {
     display: none;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-
-
-    .commerceNav .max-width .navig {
-        border-top: 1px solid var(--blk);
-        display: block;
-        height: 100vh;
-        width: 100%;
-        background-color: var(--w);
-        z-index: 999;
-        position: absolute;
-        top: 0%;
-        right: -100%;
-        /* left: 0; */
-    }
-
-    .commerceNav .max-width .navig.active {
-        right: 0;
-    }
-
-
-
-    .commerceNav .max-width .menu i {
-        display: block;
-    }
-
-    .commerceNav .max-width .navig .del {
-        position: absolute;
-        top: 2%;
-        right: 4%;
-    }
-
-    .commerceNav .max-width .navig .del i {
-        font-size: 20px;
-        display: block;
-    }
-
-    .commerceNav .max-width .navig .links {
-        display: block;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .commerceNav .max-width .navig .links li {
-        margin-top: 45px;
-        text-align: center;
-    }
-
-
-
-    .commerceNav .max-width .navig .links li a {
-        font-size: 18px;
-    }
-
-    .commerceNav .max-width .navig .theIcons {
-        display: flex;
-        padding: 5px 10px;
-    }
-
-    .commerceNav .max-width .navig .theIcons li {
-        list-style: none;
-    }
-
-    .commerceNav .max-width .navig .search {
-        width: 19rem;
-        margin: 10px;
-    }
-}
-
-
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-
-    .commerceNav .max-width .navig {
-        border-top: 1px solid var(--blk);
-        display: block;
-        height: 100vh;
-        width: 100%;
-        background-color: var(--w);
-        z-index: 999;
-        position: absolute;
-        top: 0%;
-        right: -100%;
-        /* left: 0; */
-    }
-
-    .commerceNav .max-width .navig.active {
-        right: 0;
-    }
-
-
-
-    .commerceNav .max-width .menu i {
-        display: block;
-    }
-
-    .commerceNav .max-width .navig .del {
-        position: absolute;
-        top: 2%;
-        right: 4%;
-    }
-
-    .commerceNav .max-width .navig .del i {
-        font-size: 20px;
-        display: block;
-    }
-
-    .commerceNav .max-width .navig .links {
-        display: block;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .commerceNav .max-width .navig .links li {
-        margin-top: 45px;
-        text-align: center;
-    }
-
-
-
-    .commerceNav .max-width .navig .links li a {
-        font-size: 18px;
-    }
-
-    .commerceNav .max-width .navig .theIcons {
-        display: flex;
-        padding: 5px 10px;
-    }
-
-    .commerceNav .max-width .navig .theIcons li {
-        list-style: none;
-    }
-
-    .commerceNav .max-width .navig .search {
-        width: 19rem;
-        margin: 10px;
-    }
-}
-
 /* Navigation Styling */
 
 nav{
@@ -866,9 +727,10 @@ nav .max-width .right ul li .currentPage{
 /* Ecommerce Site */
 
 .categ{
-    width: 100%;
+    width: 90%;
     height: 100vh;
     background-color: var(--ash4);
+    margin: 0 auto;
 }
 
 .categ .max-width{
@@ -882,6 +744,7 @@ nav .max-width .right ul li .currentPage{
 }
 
 .categ .max-width .left .cat{
+    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1020,6 +883,70 @@ nav .max-width .right ul li .currentPage{
     
     .logForm .max-width .down form {
         width: 90vw;
+    }
+
+    /* Commerce Navigation */
+
+    .commerceNav .max-width .navig {
+        border-top: 1px solid var(--blk);
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--w);
+        z-index: 999;
+        position: absolute;
+        top: 0%;
+        right: -100%;
+    }
+
+    .commerceNav .max-width .navig.active {
+        right: 0;
+    }
+
+    .commerceNav .max-width .menu i {
+        display: block;
+    }
+
+    .commerceNav .max-width .navig .del {
+        position: absolute;
+        top: 2%;
+        right: 4%;
+    }
+
+    .commerceNav .max-width .navig .del i {
+        font-size: 20px;
+        display: block;
+    }
+
+    .commerceNav .max-width .navig .links {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .commerceNav .max-width .navig .links li {
+        margin-top: 45px;
+        text-align: center;
+    }
+
+
+
+    .commerceNav .max-width .navig .links li a {
+        font-size: 18px;
+    }
+
+    .commerceNav .max-width .navig .theIcons {
+        display: flex;
+        padding: 5px 10px;
+    }
+
+    .commerceNav .max-width .navig .theIcons li {
+        list-style: none;
+    }
+
+    .commerceNav .max-width .navig .search {
+        width: 19rem;
+        margin: 10px;
     }
 
 
@@ -1167,6 +1094,59 @@ nav .max-width .right ul li .currentPage{
 
     .logForm .max-width .down form {
         width: 90vw;
+    }
+
+    /* Commerce Navigation */
+
+    .commerceNav .max-width .navig {
+        border-top: 1px solid var(--blk);
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--w);
+        z-index: 999;
+        position: absolute;
+        top: 0%;
+        right: -100%;
+        /* left: 0; */
+    }
+    .commerceNav .max-width .navig.active {
+        right: 0;
+    }
+    .commerceNav .max-width .menu i {
+        display: block;
+    }
+    .commerceNav .max-width .navig .del {
+        position: absolute;
+        top: 2%;
+        right: 4%;
+    }
+    .commerceNav .max-width .navig .del i {
+        font-size: 20px;
+        display: block;
+    }
+    .commerceNav .max-width .navig .links {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .commerceNav .max-width .navig .links li {
+        margin-top: 45px;
+        text-align: center;
+    }
+    .commerceNav .max-width .navig .links li a {
+        font-size: 18px;
+    }
+    .commerceNav .max-width .navig .theIcons {
+        display: flex;
+        padding: 5px 10px;
+    }
+    .commerceNav .max-width .navig .theIcons li {
+        list-style: none;
+    }
+    .commerceNav .max-width .navig .search {
+        width: 19rem;
+        margin: 10px;
     }
 
     /* Footer ::selection  */
