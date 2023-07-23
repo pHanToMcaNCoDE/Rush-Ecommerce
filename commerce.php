@@ -30,57 +30,101 @@ ini_set("display_errors", "on");
                 <h2>CATEGORY</h2>
                 <ul class="cat">
                     <li>
-                        <a href="#"><img src="assets/categIcons/electronics.png" alt="">Electronics</a>
+                        <a href="#">
+                            <img src="assets/categIcons/electronics.png" alt="">
+                            Electronics
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/categIcons/fashion.png" alt="">Fashion</a>
+                        <a href="#">
+                            <img src="assets/categIcons/fashion.png" alt="">
+                            Fashion
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/categIcons/groceries.png" alt="">Groceries</a>
+                        <a href="#">
+                            <img src="assets/categIcons/groceries.png" alt="">
+                            Groceries
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/categIcons/home-life.png" alt="">LifeStyle</a>
+                        <a href="#">
+                            <img src="assets/categIcons/home-life.png" alt="">
+                            LifeStyle
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/categIcons/medicine.png" alt="">Medicine</a>
+                        <a href="#">
+                            <img src="assets/categIcons/medicine.png" alt="">
+                            Medicine
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/categIcons/pets.png" alt="">Pets</a>
+                        <a href="#">
+                            <img src="assets/categIcons/pets.png" alt="">
+                            Pets
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><img src="assets/categIcons/sports.png" alt="">Outdoors</a>
+                        <a href="#">
+                            <img src="assets/categIcons/sports.png" alt="">
+                            Outdoors
+                        </a>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="right">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="..." alt="First slide">
+            <div class="right">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/ads/adv1.jpg" alt="First slide">
+                            <div class="textOne">
+                                <h2>Get yours at $1.99</h2>
+                                <p>You can get your favourite snacks at <br>affordable prices</p>
+                                <a href="#">
+                                    Order now
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/ads/adv2.jpg" alt="Second slide">
+                            <div class="textTwo">
+                                <h2>Get high quality <br>Cosmetics!</h2>
+                                <a href="#">
+                                    Order now
+                                    <i style="margin-left: 5px;" class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/ads/adv3.jpg" alt="Third slide">
+                            <div class="textThree">
+                                <h2>At affordable prices!</h2>
+                                <p>Rush down and grab your kids favourite <br>heros at lesser prices.
+                                </p>
+                                <a href="#">
+                                    Order now
+                                    <i style="margin-left: 5px;" class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="..." alt="Third slide">
-                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span style="color: var(--w);" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="color: var(--w);"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -129,9 +173,25 @@ ini_set("display_errors", "on");
                     <span class="visually-hidden">Next</span>
                 </button>
             </div> -->
+            </div>
         </div>
     </section>
     <?php require "grid.php"; ?>
+
+    <?php
+
+    if (isset($_GET['sigin']) && $_GET['sigin'] === "success") {
+        echo "<div id='success'>
+                        <div class='left'>
+                            <h2>👍🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Signed in successful!</h2>
+                            <p>Welcome to Rush E-commerce</p>
+                        </div>
+                    </div>";
+    }
+    ?>
 
 </body>
 
