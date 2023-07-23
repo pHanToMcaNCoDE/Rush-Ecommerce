@@ -105,7 +105,7 @@ ini_set("display_errors", "on");
         top: 25%;
         left: 5%;
         padding-left: .6rem;">
-                                <h2>Get high quality <br>Cosmetics!</h2>
+                                <h2 style="z-index: 999;">Get high quality <br>Cosmetics!</h2>
                                 <a href="#">Order now <i style="margin-left: 5px;"
                                         class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
@@ -116,7 +116,7 @@ ini_set("display_errors", "on");
         top: 25%;
         left: 5%;
         padding-left: .6rem;">
-                                <h2>At affordable prices!</h2>
+                                <h2 style="z-index: 999;">At affordable prices!</h2>
                                 <p>Rush down and grab your kids favourite <br>heros at lesser prices.
                                 </p>
                                 <a href="#">Order now <i style="margin-left: 5px;"
@@ -126,7 +126,8 @@ ini_set("display_errors", "on");
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide="prev">
-                        <span style="border: 1px solid var(--w); background-color: var(--cr);"class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span style="border: 1px solid var(--w); background-color: var(--cr);"
+                            class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
