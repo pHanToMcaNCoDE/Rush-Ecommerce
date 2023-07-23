@@ -68,7 +68,7 @@ require("navbar.php");
     <section id="regForm" class="regForm">
         <img src="assets/regImg.jpg" alt="Product Image" />
         <div class="max-width">
-            <div class="up">
+            <div class="up" style="z-index: 999;">
                 <div class="img">
                     <img src="assets/logo.png" alt="Rush Logo">
                 </div>
@@ -112,74 +112,74 @@ require("navbar.php");
     <?php
     if (isset($_GET['empty']) && $_GET['empty'] == 'all') {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>All fields are required!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>All fields are required!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else if (isset($_GET['empty']) && $_GET['empty'] == 'uname') {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>Username required!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Username required!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else if (isset($_GET['empty']) && $_GET['empty'] == 'email') {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>Email Address required!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Email Address required!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else if (isset($_GET['empty']) && $_GET['empty'] == 'pwd') {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>Password required!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Password required!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else if (isset($_GET['signup']) && $_GET['signup'] == "uname") {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>Username should not be more that 6 characters!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Username should not be more that 6 characters!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else if (isset($_GET['signup']) && $_GET['signup'] == "pwd") {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>Password should not be more that 16 characters!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Password should not be more that 16 characters!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else if (isset($_GET['signup']) && $_GET['signup'] == "email") {
         echo "<div id='err'>
-                        <div class='left'>
-                            <h2>👎🏼</h2>
-                        </div>
-                        <div class='right'>
-                            <h2>Invalid Email Address!</h2>
-                            <p>Please try again</p>
-                        </div>
-                    </div>";
+                <div class='left'>
+                    <h2>👎🏼</h2>
+                </div>
+                <div class='right'>
+                    <h2>Invalid Email Address!</h2>
+                    <p>Please try again</p>
+                </div>
+            </div>";
     } else {
         exit();
     }

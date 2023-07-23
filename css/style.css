@@ -38,7 +38,7 @@ html {
 #err {
     z-index: 999;
     position: absolute;
-    top: 55%;
+    /* top: 55%; */
     right: 2%;
     width: 30%;
     padding: 1em;
@@ -53,6 +53,119 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    animation-name: appearDisappear;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+@keyframes appearDisappear{
+    0%{
+        top: -40%;
+        display: flex;
+        opacity: 0;
+    }
+    5% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    10% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    15% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    20% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    25% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    30% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    35% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    40% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    45% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    50% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    55% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    60% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    65% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    70% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    75% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    80% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    85% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    90% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    95% {
+        top: 55%;
+        display: flex;
+        opacity: 1;
+    }
+    100% {
+        top: -40%;
+        display: flex;
+        opacity: 0;
+    }
 }
 #err .left{
     width: 30%;
@@ -88,6 +201,11 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    animation-name: appearDisappear;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 #suc .left {
@@ -230,6 +348,7 @@ nav .max-width{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 50px;
 }
 
 nav .max-width .right ul{
@@ -288,6 +407,7 @@ nav .max-width .right ul li .currentPage{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 }
 
 .regForm .max-width .up {
