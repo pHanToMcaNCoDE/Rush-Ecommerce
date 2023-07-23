@@ -30,21 +30,330 @@
     --g: #66B830;
 }
 
+html {
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+#err {
+    z-index: 999;
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    width: 30%;
+    padding: 1em;
+    align-items: center;
+    background-color: var(--cr2);
+    border: 1px solid var(--cr);
+    border-radius: 3px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: var(--av), sans-serif;
+    color: var(--cr);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#err .left{
+    width: 30%;
+}
+#err .right {
+    width: 70%;
+}
+#err .left h2{
+    font-size: 2.6em;
+}
+#err .right h2{
+    font-size: 1.2em;
+}
+#err .right p {
+    font-size: .9em;
+}
+
+#suc {
+    z-index: 999;
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    width: 30%;
+    padding: 1em;
+    align-items: center;
+    background-color: var(--g2);
+    border: 1px solid var(--g);
+    border-radius: 3px;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: var(--av), sans-serif;
+    color: var(--g);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#suc .left {
+    width: 30%;
+}
+
+#suc .right {
+    width: 70%;
+}
+
+#suc .left h2 {
+    font-size: 2.6em;
+}
+
+#suc .right h2 {
+    font-size: 1.2em;
+}
+
+#suc .right p {
+    font-size: .9em;
+}
+
+
+/* #err .fa-xmark {
+    cursor: pointer;
+}
+
+#err.active {
+    display: none;
+} */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+
+
+/* Commerce Navigation Styling */
+
+.commerceNav {
+    padding: 10px 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--blk);
+}
+
+.commerceNav .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commerceNav .max-width .logo a img {
+    width: 40px;
+    height: 40px;
+}
+
+.commerceNav .max-width .navig {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commerceNav .max-width .navig .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.commerceNav .max-width .links li {
+    list-style: none;
+}
+
+
+.commerceNav .max-width .navig .del i {
+    display: none;
+}
+
+.commerceNav .max-width .navig .links li a {
+    margin-right: 30px;
+    color: var(--blk);
+    font-family: var(--pop), sans-serif;
+    font-weight: 300;
+    font-size: 17px;
     text-decoration: none;
 }
 
-.max-width {
-    max-width: 1300px;
-    padding: 0 50px;
-    margin: auto;
+.commerceNav .max-width .navig .search {
+    width: 30rem;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.commerceNav .max-width .navig .search input {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: var(--av), sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    outline: none;
+    margin-right: 7px;
+    border: none;
+    background-color: transparent;
+}
+
+.commerceNav .max-width .navig .theIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commerceNav .max-width .navig .theIcons li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.commerceNav .max-width .menu i {
+    font-size: 20px;
+    display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+
+    .commerceNav .max-width .navig {
+        border-top: 1px solid var(--blk);
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--w);
+        z-index: 999;
+        position: absolute;
+        top: 0%;
+        right: -100%;
+        /* left: 0; */
+    }
+
+    .commerceNav .max-width .navig.active {
+        right: 0;
+    }
+
+
+
+    .commerceNav .max-width .menu i {
+        display: block;
+    }
+
+    .commerceNav .max-width .navig .del {
+        position: absolute;
+        top: 2%;
+        right: 4%;
+    }
+
+    .commerceNav .max-width .navig .del i {
+        font-size: 20px;
+        display: block;
+    }
+
+    .commerceNav .max-width .navig .links {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .commerceNav .max-width .navig .links li {
+        margin-top: 45px;
+        text-align: center;
+    }
+
+
+
+    .commerceNav .max-width .navig .links li a {
+        font-size: 18px;
+    }
+
+    .commerceNav .max-width .navig .theIcons {
+        display: flex;
+        padding: 5px 10px;
+    }
+
+    .commerceNav .max-width .navig .theIcons li {
+        list-style: none;
+    }
+
+    .commerceNav .max-width .navig .search {
+        width: 19rem;
+        margin: 10px;
+    }
+}
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .commerceNav .max-width .navig {
+        border-top: 1px solid var(--blk);
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--w);
+        z-index: 999;
+        position: absolute;
+        top: 0%;
+        right: -100%;
+        /* left: 0; */
+    }
+
+    .commerceNav .max-width .navig.active {
+        right: 0;
+    }
+
+
+
+    .commerceNav .max-width .menu i {
+        display: block;
+    }
+
+    .commerceNav .max-width .navig .del {
+        position: absolute;
+        top: 2%;
+        right: 4%;
+    }
+
+    .commerceNav .max-width .navig .del i {
+        font-size: 20px;
+        display: block;
+    }
+
+    .commerceNav .max-width .navig .links {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .commerceNav .max-width .navig .links li {
+        margin-top: 45px;
+        text-align: center;
+    }
+
+
+
+    .commerceNav .max-width .navig .links li a {
+        font-size: 18px;
+    }
+
+    .commerceNav .max-width .navig .theIcons {
+        display: flex;
+        padding: 5px 10px;
+    }
+
+    .commerceNav .max-width .navig .theIcons li {
+        list-style: none;
+    }
+
+    .commerceNav .max-width .navig .search {
+        width: 19rem;
+        margin: 10px;
+    }
 }
 
 /* Navigation Styling */
@@ -553,9 +862,46 @@ nav .max-width .right ul li .currentPage{
     font-weight: 300;
 }
 
+
+/* Ecommerce Site */
+
+.categ{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--ash4);
+}
+
+.categ .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categ .max-width .left{
+    width: 40%;
+}
+
+.categ .max-width .left .cat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--blk);
+}
+
+.categ .max-width .right {
+    width: 60%;
+}
+
+
+
+
+
+
+
+
 /* Responsive Design */
 
-@media only screen and (min-width: 270px) and (max-width: 480px){
+@media only screen and (min-width: 320px) and (max-width: 480px){
 
     /* Menu ::selection */
 
@@ -598,6 +944,8 @@ nav .max-width .right ul li .currentPage{
         text-align: center;
     }
 
+    /* Registration ::selection */
+
     .regForm{
         width: 100%;
     }
@@ -619,7 +967,6 @@ nav .max-width .right ul li .currentPage{
         text-decoration: none;
     }
 
-
     .line {
         content: '';
         width: 85%;
@@ -634,7 +981,50 @@ nav .max-width .right ul li .currentPage{
         width: 90vw;
     }
 
+
+    /* Login ::selection */
+
+    .logForm {
+        width: 100%;
+    }
+
+    .logForm .max-width .up .txt {
+        margin: .5em;
+    }
+
+    .logForm .max-width .up .txt h2 {
+        font-size: 2rem;
+    }
+
+    .logForm .max-width .up .txt {
+        padding: 2em;
+    }
+
+    .logForm .max-width .up .txt p {
+        font-size: 1rem;
+    }
+
+    .logForm .max-width .up .txt p a {
+        text-decoration: none;
+    }
+
+    .line {
+        content: '';
+        width: 85%;
+        height: 1px;
+        background-color: var(--ash1);
+        border-radius: 6px;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    
+    .logForm .max-width .down form {
+        width: 90vw;
+    }
+
+
     /* Footer ::selection  */
+
     .footer .max-width {
         flex-direction: column;
         margin: 0 auto;
@@ -736,6 +1126,46 @@ nav .max-width .right ul li .currentPage{
     }
 
     .regForm .max-width .down form {
+        width: 90vw;
+    }
+
+    /* Login ::selection */
+
+    .logForm {
+        width: 100%;
+    }
+
+    .logForm .max-width .up .txt {
+        margin: .5em;
+    }
+
+    .logForm .max-width .up .txt h2 {
+        font-size: 2rem;
+    }
+
+    .logForm .max-width .up .txt {
+        padding: 2em;
+    }
+
+    .logForm .max-width .up .txt p {
+        font-size: 1rem;
+    }
+
+    .logForm .max-width .up .txt p a {
+        text-decoration: none;
+    }
+
+    .line {
+        content: '';
+        width: 85%;
+        height: 1px;
+        background-color: var(--ash1);
+        border-radius: 6px;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .logForm .max-width .down form {
         width: 90vw;
     }
 
@@ -843,6 +1273,47 @@ nav .max-width .right ul li .currentPage{
     .regForm .max-width .down form {
         width: 90vw;
     }
+
+
+        /* Login ::selection */
+    
+        .logForm {
+            width: 100%;
+        }
+    
+        .logForm .max-width .up .txt {
+            margin: .5em;
+        }
+    
+        .logForm .max-width .up .txt h2 {
+            font-size: 2rem;
+        }
+    
+        .logForm .max-width .up .txt {
+            padding: 2em;
+        }
+    
+        .logForm .max-width .up .txt p {
+            font-size: 1rem;
+        }
+    
+        .logForm .max-width .up .txt p a {
+            text-decoration: none;
+        }
+    
+        .line {
+            content: '';
+            width: 85%;
+            height: 1px;
+            background-color: var(--ash1);
+            border-radius: 6px;
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+    
+        .logForm .max-width .down form {
+            width: 90vw;
+        }
 
     /* Footer ::selection  */
     .footer .max-width {

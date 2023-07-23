@@ -113,7 +113,7 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>The Rush || inspired by dreams - Registration</title>
+    <!-- <title>The Rush || inspired by dreams - Registration</title> -->
     <script src="https://kit.fontawesome.com/032421aa45.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -140,8 +140,8 @@
                                 <div class="t">
                                     <p
                                         style="position: absolute; top: 2%; left: 2%; background: var(--cr); color: var(--w); padding: 5px 10px; border-radius: 7px; font-size: 16px;">
-                                        -40%</p>
-
+                                        -40%
+                                    </p>
                                     <img style="cursor: pointer; padding: 5px; position: absolute; top: 2%; right: 2%; background-color: var(--w); border-radius: 50%;"
                                         src="assets/like.png" alt="Like-List Icon" width="32" height="32">
                                 </div>

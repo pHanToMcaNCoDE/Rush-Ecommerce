@@ -1,9 +1,57 @@
 <?php
+require "connection.php";
 
+if ($_POST['signup']) {
+    $uname = $_POST['uname'];
+    $email = $_POST['email'];
+    $pwd = $_POST['pwd'];
+
+    $connect = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+
+    if (!$connect) {
+        die('Cannot connect to the database ' . $connect->connect_error);
+    } else {
+        $query = "INSERT INTO `Signup`(`UserName`,`EmailAddress`,`Password`) VALUES('" . $uname . "','" . $email . "', '" . $pwd . "')";
+
+        if (empty($uname) && empty($email) && empty($pwd)) {
+            header("Location: index.php?empty=all");
+            exit();
+        } else if (empty($uname) && isset($email) && isset($pwd)) {
+            header("Location: index.php?empty=uname");
+            exit();
+        } else if (isset($uname) && empty($email) && isset($pwd)) {
+            header("Location: index.php?empty=email");
+            exit();
+        } else if (isset($uname) && isset($email) && empty($pwd)) {
+            header("Location: index.php?empty=pwd");
+            exit();
+        } else {
+            if (strlen($uname) > 6) {
+                header("Location: index.php?signup=uname");
+                exit();
+            } else if (strlen($pwd) > 8) {
+                header("Location: index.php?signup=pwd");
+                exit();
+            } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                header("Location: index.php?signup=email");
+                exit();
+            } else if ($connect->query($query)) {
+                header("Location: signin.php?signup=success");
+                exit();
+            } else {
+                header("Location: index.php?sigup=error");
+            }
+        }
+    }
+}
+?>
+
+<?php
+ini_set('display_error', "On");
 require("navbar.php");
-require("data.php");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +81,7 @@ require("data.php");
             </div>
 
             <div class="down">
-                <form class="register" action="" method="post">
+                <form class="register" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <h2>Signup</h2>
                     <div class="row">
                         <div class="content">
@@ -50,7 +98,7 @@ require("data.php");
                         </div>
                     </div>
                     <div class="btn">
-                        <input type="submit" name="submit" value="Register" class="submitReg">
+                        <input type="submit" name="signup" value="Signup" class="submitReg">
                     </div>
                 </form>
             </div>
@@ -60,7 +108,84 @@ require("data.php");
     <?php
     require("footer.php");
     ?>
-    <script>
+
+    <?php
+    if (isset($_GET['empty']) && $_GET['empty'] == 'all') {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>All fields are required!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else if (isset($_GET['empty']) && $_GET['empty'] == 'uname') {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Username required!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else if (isset($_GET['empty']) && $_GET['empty'] == 'email') {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Email Address required!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else if (isset($_GET['empty']) && $_GET['empty'] == 'pwd') {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Password required!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else if (isset($_GET['signup']) && $_GET['signup'] == "uname") {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Username should not be more that 6 characters!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else if (isset($_GET['signup']) && $_GET['signup'] == "pwd") {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Password should not be more that 16 characters!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else if (isset($_GET['signup']) && $_GET['signup'] == "email") {
+        echo "<div id='err'>
+                        <div class='left'>
+                            <h2>👎🏼</h2>
+                        </div>
+                        <div class='right'>
+                            <h2>Invalid Email Address!</h2>
+                            <p>Please try again</p>
+                        </div>
+                    </div>";
+    } else {
+        exit();
+    }
+
+    ?>
+    <!-- <script>
     var success = document.getElementById('suc');
     var error = document.getElementById('err');
     var del = document.querySelectorAll('.fa-xmark');
@@ -76,8 +201,8 @@ require("data.php");
             error.classList.add('active');
         }
 
-    );
-    </script>
+    
+    </script>-->
 </body>
 
 </html>

@@ -2,34 +2,43 @@
 
 
 
-require("connect.php");
-require("loginData.php");
+require("connection.php");
 
 
 
 // Login
 
-if(isset($_GET['signin']) && $_GET['signin'] == "done" && isset($_POST['submit'])){
+if(isset($_GET['signup']) && $_GET['signup'] == "yes"){
 
     $uname = $_POST['uname'];
+    $email = $_POST['email'];
     $pwd = $_POST['pwd'];
 
-    $log = new Login();
+    $signup = new Signup();
     
 
-            if(empty($uname) || empty($email) || empty($pwd)){
-                header("Location: Login.php?signin=empty");
+            if(empty($uname)) {
+                header("Location: index.php?uname");
+                exit();
+            }if(empty($email)) {
+                header("Location: index.php?email");
+                exit();
+            }if(empty($pwd)){
+                header("Location: index.php?pwd");
                 exit();
             }else{
-                if(strlen($pwd) > 8){
-                    header("Location: Login.php?signin=password");
+                if(strlen($uname) > 6){
+                    header("Location: Login.php?signup=uname");
+                    exit();
+                } else if (strlen($pwd) > 8) {
+                    header("Location: Login.php?signup=pwd");
                     exit();
                 }else{
-                    if($log->getLogin($uname, $pwd)){
-                        header("Location: index.php?signin=success");
+                    if($log->getLogin($uname, $email, $pwd)){
+                        header("Location: sigin.php.php?signup=success");
                         exit();
                     }else{
-                        header("Location: Login.php?sigin=error");
+                        header("Location: index.php?sigup=error");
                     }
                 } 
             }

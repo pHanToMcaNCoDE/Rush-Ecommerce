@@ -34,6 +34,19 @@ require("navbar.php");
 
 
             <div class="down">
+                <?php
+                    if (isset($_GET['signup']) && $_GET['signup'] === "success") {
+                        echo "<div id='suc'>
+                            <div class='left'>
+                                <h2>👍🏼</h2>
+                            </div>
+                            <div class='right'>
+                                <h2>Signup was successful!</h2>
+                                <p>Please sign into your account</p>
+                            </div>
+                        </div>";
+                    }
+                ?>
                 <form class="login" action="" method="post">
                     <h2>Signin</h2>
                     <div class="row">
