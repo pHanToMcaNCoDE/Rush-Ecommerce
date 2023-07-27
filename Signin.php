@@ -32,6 +32,7 @@ if($_POST['signin']){
             header("Location: Signin.php?pwd=len");
             exit();
         } else if ($run->num_rows == 1) {
+            $_SESSION['UNAME'] = $e;
             header("Location: commerce.php?sigin=success");
         } else if (!($run->num_rows >= 1)) {
             header("Location: Signin.php?signin=null");

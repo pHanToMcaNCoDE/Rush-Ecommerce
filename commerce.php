@@ -27,7 +27,7 @@ ini_set("display_errors", "on");
     <section class="categ" id="categ">
         <div class="max-width">
             <div class="left">
-                <h2>CATEGORY</h2>
+                <h2>CATEGORIES</h2>
                 <ul class="cat">
                     <li>
                         <a href="#">
@@ -61,14 +61,14 @@ ini_set("display_errors", "on");
                     </li>
                     <li>
                         <a href="#">
-                            <img src="assets/categIcons/pets.png" alt="">
-                            Pets
+                            <img src="assets/categIcons/sports.png" alt="">
+                            Outdoors
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="assets/categIcons/sports.png" alt="">
-                            Outdoors
+                            <img src="assets/categIcons/pets.png" alt="">
+                            Pets
                         </a>
                     </li>
                 </ul>
@@ -96,7 +96,8 @@ ini_set("display_errors", "on");
                                 <h2>Get yours at $1.99</h2>
                                 <p>You can get your favourite snacks at <br>affordable prices</p>
                                 <a href="#">Order now <i style="margin-left: 5px;"
-                                        class="fa-solid fa-arrow-right-long"></i></a>
+                                        class="fa-solid fa-arrow-right-long"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -104,9 +105,9 @@ ini_set("display_errors", "on");
                             <div class="textTwo" style="position: absolute;
         top: 25%;
         left: 5%;
-        padding-left: .6rem;">
-                                <h2 style="z-index: 999;">Get high quality <br>Cosmetics!</h2>
-                                <a href="#">Order now <i style="margin-left: 5px;"
+        padding-left: 2.3rem;">
+                                <h2 style="color: var(--blk); z-index: 999;">Get high quality <br>Cosmetics!</h2>
+                                <a style="color: var(--blk);" href="#">Order now <i style="margin-left: 5px;"
                                         class="fa-solid fa-arrow-right-long"></i></a>
                             </div>
                         </div>
@@ -115,7 +116,7 @@ ini_set("display_errors", "on");
                             <div class="textThree" style="position: absolute;
         top: 25%;
         left: 5%;
-        padding-left: .6rem;">
+        padding-left: 2.5rem;">
                                 <h2 style="z-index: 999;">At affordable prices!</h2>
                                 <p>Rush down and grab your kids favourite <br>heros at lesser prices.
                                 </p>

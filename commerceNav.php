@@ -1,9 +1,20 @@
 <?php
 ini_set("display_errors", "on");
 
-require "connect.php";
+require "connection.php";
+
+
+$con = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+
 session_start();
 
+if ($_SESSION['UNAME'] == "") {
+    $que = mysqli_query($con, "select * from Signup where  UserName='" . $_SESSION['UNAME'] . "'");
+    $res = mysqli_fetch_array($que);
+    $_SESSION = $res;
+
+    $_SESSION['UNAME'] = $res['UserName'];
+}
 
 ?>
 
@@ -43,8 +54,11 @@ session_start();
                 </div>
                 <ul class="theIcons">
                     <li>
-                        <a href="#">
+                        <a href="#" style="display: flex; align-items: center;">
                             <img src="assets/user.png" alt="Account Icon" width="30" height="30">
+                            <p style="color: var(--blk); text-decoration: underline; padding-top: .5rem;">
+                                <?php echo $_SESSION['UNAME']; ?>
+                            </p>
                         </a>
                     </li>
                     <li>

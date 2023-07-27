@@ -231,7 +231,7 @@ html {
 #success {
     position: absolute;
     top: 10%;
-    right: 2%;
+    right: 4%;
     width: 30%;
     padding: 1em;
     align-items: center;
@@ -292,7 +292,7 @@ html {
 /* Commerce Navigation Styling */
 
 .commerceNav {
-    padding: 10px 0;
+    padding: 5px 0;
     width: 100%;
     height: 70px;
     border-bottom: 1px solid var(--blk);
@@ -907,7 +907,7 @@ nav .max-width .right ul li .currentPage{
     width: 23%;
     border: 1px solid var(--blk);
     border-top-color: transparent;
-    height: 64vh;
+    height: 68vh;
 
 }
 
@@ -923,7 +923,7 @@ nav .max-width .right ul li .currentPage{
     font-size: 2em;
     font-family: var(--ub), sans-serif;
     font-weight: 500;
-    padding: .4rem;
+    padding: .6rem;
     letter-spacing: .4rem;
 }
 
@@ -948,8 +948,8 @@ nav .max-width .right ul li .currentPage{
 }
 
 .categ .max-width .left .cat li a img{
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     margin-right: .4rem;
 }
 
@@ -1049,14 +1049,14 @@ nav .max-width .right ul li .currentPage{
 }
 
 .categ .max-width .right .carousel .carousel-inner .carousel-item .textThree h2 {
-    color: var(--w);
+    color: var(--blk);
     font-size: 3em;
     font-family: var(--ub), sans-serif;
     font-weight: 500;
 }
 
 .categ .max-width .right .carousel .carousel-inner .carousel-item .textThree p {
-    color: var(--w);
+    color: var(--blk);
     font-size: 1.1em;
     font-family: var(--av), sans-serif;
     font-weight: 300;
@@ -1065,7 +1065,7 @@ nav .max-width .right ul li .currentPage{
 }
 
 .categ .max-width .right .carousel .carousel-inner .carousel-item .textThree a {
-    color: var(--w);
+    color: var(--blk);
     font-size: 1em;
     font-family: var(--rob), sans-serif;
     font-weight: 300;
@@ -1692,7 +1692,7 @@ nav .max-width .right ul li .currentPage{
     }
 
     .categ .max-width .right .carousel {
-        width: 100vw;
+        width: 60vw;
     }
 
     .categ .max-width .right .carousel .carousel-inner .carousel-item {
